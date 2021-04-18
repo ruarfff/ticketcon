@@ -578,6 +578,11 @@ a.back-to-top:hover, a.back-to-top:focus {
   width: 75%;
 }
 
+.wink {
+  width: 400px;
+  height: 300px;
+}
+
 .top-nav-collapse {
   background: #fff;
   z-index: 999999;

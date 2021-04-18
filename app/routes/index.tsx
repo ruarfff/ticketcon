@@ -2,15 +2,10 @@ import type { MetaFunction, LinksFunction } from '@remix-run/react'
 
 import stylesUrl from '../styles/index.css'
 
-import logo1 from '../img/sponsors/logo-1.png'
-import logo2 from '../img/sponsors/logo-2.png'
-import logo3 from '../img/sponsors/logo-3.png'
-import logo4 from '../img/sponsors/logo-4.png'
-import logo5 from '../img/sponsors/logo-5.png'
-import logo6 from '../img/sponsors/logo-6.png'
-import logo7 from '../img/sponsors/logo-7.png'
-import logo8 from '../img/sponsors/logo-8.png'
-import logo9 from '../img/sponsors/logo-9.png'
+import logo1 from '../img/sponsors/microsoft.jpg'
+import logo2 from '../img/sponsors/snow.png'
+import logo3 from '../img/sponsors/atlassian.png'
+import logo4 from '../img/sponsors/remedy.png'
 
 import img1 from '../img/about/img1.png'
 import img2 from '../img/event/img2.jpg'
@@ -20,6 +15,11 @@ import img4 from '../img/event/img4.jpg'
 import speaker1 from '../img/speaker/speakers-1.jpg'
 import speaker2 from '../img/speaker/speakers-2.jpg'
 import speaker3 from '../img/speaker/speakers-3.jpg'
+
+import trump from '../img/speaker/trump.jpg'
+import jong from '../img/speaker/jong.jpg'
+import koch from '../img/speaker/koch.jpg'
+import murdock from '../img/speaker/rupert-murdoch.jpg'
 
 import team1 from '../img/team/team-01.jpg'
 import team2 from '../img/team/team-02.jpg'
@@ -36,15 +36,17 @@ import blogImg1 from '../img/blog/img-1.jpg'
 import blogImg2 from '../img/blog/img-2.jpg'
 import blogImg3 from '../img/blog/img-3.jpg'
 
+import winkImg from '../img/wink.jpg'
+
 import backgroundImg from '../img/background/countdown.jpg'
 
 import eventVideo from '../video/event.webm'
 
 export let meta: MetaFunction = () => {
   return {
-    title: 'Ticketcon',
+    title: 'TicketCon',
     description:
-      'Home of ticket culture and the convention where the tickets submit us.',
+      'Home of ticketing culture and the convention where the tickets submit us.',
   }
 }
 
@@ -86,36 +88,41 @@ export default function Index() {
                   <div className="about-text">
                     <h2>About The Conference</h2>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit
-                      sed do eiusmod ncididunt ametfh consectetur dolore magna
-                      aliqua. Ut enim ad minim veniam dolor sitame magnaelit ate
-                      consectetur adipisicing. Lorem ipsum dolor sit amet
-                      consectetur adipisicing elit sed do eiusmod.
+                      Do you measure your productivity by tickets closed? Do you
+                      have a healthy distrust of any software that isn't COTS
+                      provided with a hefty enterprise license and a team of
+                      contractors for support? Do you have a general distrust of
+                      any automation created in your own company? If you
+                      answered yes to any of those, this is the conference for
+                      you!
                     </p>
                   </div>
                   <ul className="stylish-list mb-3">
                     <li>
-                      <i className="lni-check-mark-circle"></i>Networking
-                      Sessions
+                      <i className="lni lni-checkmark-circle"></i>Networking
+                      with ticket system vendors
                     </li>
                     <li>
-                      <i className="lni-check-mark-circle"></i>Meet New
-                      Professional Faces
+                      <i className="lni lni-checkmark-circle"></i>Learn cutting
+                      edge techniques such as 'one ticket to rule them all' and
+                      'using four ticketing systems for the same thing but
+                      respond to only one of them randomly'
                     </li>
                     <li>
-                      <i className="lni-check-mark-circle"></i>Get Inspired by
-                      Amazing Speakers
+                      <i className="lni lni-checkmark-circle"></i>Get inspired
+                      by record breaking ticket closers
                     </li>
                     <li>
-                      <i className="lni-check-mark-circle"></i>Lorem ipsum dolor
-                      sit ameterib
+                      <i className="lni lni-checkmark-circle"></i>The most fun
+                      and obscure field names you should be using and making
+                      required in a ticket
                     </li>
                     <li>
-                      <i className="lni-check-mark-circle"></i>Lorem ipsum dolor
-                      sit ameterib quodsi
+                      <i className="lni lni-checkmark-circle"></i>Throw rotten
+                      garbage at developers
                     </li>
                   </ul>
-                  <a className="btn btn-common" href="#">
+                  <a className="btn btn-common" href="#information-bar">
                     Learn More
                   </a>
                 </div>
@@ -134,7 +141,7 @@ export default function Index() {
             <div className="tb-c">
               <div className="polina">
                 <button>
-                  <i className="lni-play"></i>
+                  <i className="lni lni-play"></i>
                 </button>
               </div>
             </div>
@@ -148,11 +155,11 @@ export default function Index() {
             <div className="col-lg-3 col-md-6 col-xs-12">
               <ul>
                 <li>
-                  <i className="lni-map-marker"></i>
+                  <i className="lni lni-map-marker"></i>
                 </li>
                 <li>
                   <span>
-                    <b>Location</b> Maria Hall, NY, USA
+                    <b>Location</b> Kafka Hall, NY, USA
                   </span>
                 </li>
               </ul>
@@ -160,11 +167,11 @@ export default function Index() {
             <div className="col-lg-3 col-md-6 col-xs-12">
               <ul>
                 <li>
-                  <i className="lni-calendar"></i>
+                  <i className="lni lni-calendar"></i>
                 </li>
                 <li>
                   <span>
-                    <b>Date & Time</b> 10am - 7pm, 15th Oct
+                    <b>Date & Time</b> 10am - 7pm, 23rd Aug
                   </span>
                 </li>
               </ul>
@@ -172,11 +179,11 @@ export default function Index() {
             <div className="col-lg-3 col-md-6 col-xs-12">
               <ul>
                 <li>
-                  <i className="lni-mic"></i>
+                  <i className="lni lni-mic"></i>
                 </li>
                 <li>
                   <span>
-                    <b>Speakers</b> 25 Professionals
+                    <b>Speakers</b> 45 Professionals
                   </span>
                 </li>
               </ul>
@@ -184,11 +191,11 @@ export default function Index() {
             <div className="col-lg-3 col-md-6 col-xs-12">
               <ul>
                 <li>
-                  <i className="lni-user"></i>
+                  <i className="lni lni-user"></i>
                 </li>
                 <li>
                   <span>
-                    <b>Seats</b> 100 People
+                    <b>Seats</b> 1000 People
                   </span>
                 </li>
               </ul>
@@ -209,8 +216,10 @@ export default function Index() {
                   Why You Should Join?
                 </h2>
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
-                  Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum
-                  vocent mediocritatem an <br /> cule dicta iriure at phaedrum.
+                  It's time to take ticketing culture to the next level. Take
+                  control. Stop mindless productivity. Track everything. <br />{' '}
+                  Be part of the ticketing revolution where instead of following
+                  the crowd and making change, we're stopping change!
                 </p>
               </div>
             </div>
@@ -218,22 +227,22 @@ export default function Index() {
           <div className="row intro-wrapper">
             <div className="col-lg-4 col-md-6 col-xs-12">
               <div className="single-intro-text mb-70">
-                <i className="lni-microphone"></i>
+                <i className="lni lni-microphone"></i>
                 <h3>Great Speakers</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Minus mollitia, excepturi.
+                  Hear from the best in the ticketing business. All your
+                  favourite ticket culture personalities at one event.
                 </p>
                 <span className="count-number">01</span>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-xs-12">
               <div className="single-intro-text">
-                <i className="lni-users"></i>
-                <h3 className="ts-title">New People</h3>
+                <i className="lni lni-users"></i>
+                <h3 className="ts-title">Like Minded People</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Minus mollitia, excepturi.
+                  Enjoy the company of people who detest idiots who can't fill
+                  in a ticket exactly right, just as much as you do.
                 </p>
                 <span className="count-number">02</span>
               </div>
@@ -241,44 +250,46 @@ export default function Index() {
             </div>
             <div className="col-lg-4 col-md-6 col-xs-12">
               <div className="single-intro-text mb-70">
-                <i className="lni-bullhorn"></i>
+                <i className="lni lni-bullhorn"></i>
                 <h3>Global Event</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Minus mollitia, excepturi.
+                  Learn how tickets are being leveraged all around the world to
+                  maximise meta work.
                 </p>
                 <span className="count-number">03</span>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-xs-12">
               <div className="single-intro-text mb-70">
-                <i className="lni-heart"></i>
+                <i className="lni lni-heart"></i>
                 <h3>Get Inspired</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Minus mollitia, excepturi.
+                  Did you know you can get highly skilled knowledge workers to
+                  spend most of their time filling in tickets? Be inspired by
+                  storied like this.
                 </p>
                 <span className="count-number">04</span>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-xs-12">
               <div className="single-intro-text mb-70">
-                <i className="lni-cup"></i>
-                <h3>Networking Session</h3>
+                <i className="lni lni-cup"></i>
+                <h3>Ticket Awards</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Minus mollitia, excepturi.
+                  See how the best in the world are doing it. Most tickets
+                  closed in a day. Fasted rejected ticket. Most fields in a
+                  ticket and much much more.
                 </p>
                 <span className="count-number">05</span>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-xs-12">
               <div className="single-intro-text mb-70">
-                <i className="lni-gallery"></i>
-                <h3>Meet New Faces</h3>
+                <i className="lni lni-gallery"></i>
+                <h3>Create Tickets with Friends</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Minus mollitia, excepturi.
+                  Get the try our the latest in ticket creation technology with
+                  your friends and colleagues.
                 </p>
                 <span className="count-number">06</span>
               </div>
@@ -299,10 +310,10 @@ export default function Index() {
             <div className="col-lg-3 col-md-6 col-xs-12 work-counter-widget">
               <div className="counter">
                 <div className="icon">
-                  <i className="lni-mic"></i>
+                  <i className="lni lni-mic"></i>
                 </div>
                 <div className="counter-content">
-                  <div className="counterUp">42</div>
+                  <div className="counterUp">45</div>
                   <p>Spekers</p>
                 </div>
               </div>
@@ -311,10 +322,10 @@ export default function Index() {
             <div className="col-lg-3 col-md-6 col-xs-12 work-counter-widget">
               <div className="counter">
                 <div className="icon">
-                  <i className="lni-bulb"></i>
+                  <i className="lni lni-bulb"></i>
                 </div>
                 <div className="counter-content">
-                  <div className="counterUp">800</div>
+                  <div className="counterUp">1000</div>
                   <p>Seats</p>
                 </div>
               </div>
@@ -323,10 +334,10 @@ export default function Index() {
             <div className="col-lg-3 col-md-6 col-xs-12 work-counter-widget">
               <div className="counter">
                 <div className="icon">
-                  <i className="lni-briefcase"></i>
+                  <i className="lni lni-briefcase"></i>
                 </div>
                 <div className="counter-content">
-                  <div className="counterUp">24</div>
+                  <div className="counterUp">4</div>
                   <p>Sponsors</p>
                 </div>
               </div>
@@ -335,7 +346,7 @@ export default function Index() {
             <div className="col-lg-3 col-md-6 col-xs-12 work-counter-widget">
               <div className="counter">
                 <div className="icon">
-                  <i className="lni-coffee-cup"></i>
+                  <i className="lni lni-coffee-cup"></i>
                 </div>
                 <div className="counter-content">
                   <div className="counterUp">56</div>
@@ -1210,484 +1221,89 @@ export default function Index() {
             </div>
           </div>
           <div className="row justify-content-bt">
-            <div className="col-lg-3 col-md-6 col-xs-12">
-              <div className="team-item wow fadeInUp" data-wow-delay="0.2s">
-                <div className="team-img">
-                  <img className="img-fluid" src={team1} alt="" />
-                  <div className="team-overlay">
-                    <div className="overlay-social-icon text-center">
-                      <ul className="social-icons">
-                        <li>
-                          <a href="#">
-                            <i
-                              className="lni-twitter-filled"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="lni-google" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i
-                              className="lni-facebook-filled"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="lni-pinterest" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                      </ul>
+            {[
+              {
+                name: 'Donal Trump',
+                title: 'Ticket philantorpist',
+                image: trump,
+              },
+              {
+                name: 'Kim Jong Un',
+                title: 'Global leader and ticket enthusiast',
+                image: jong,
+              },
+              {
+                name: 'Rupert Murdoch',
+                title: 'Ticket publisher',
+                image: murdock,
+              },
+              {
+                name: 'Charles Koch',
+                title: 'Ticket magnate',
+                image: koch,
+              },
+            ].map((speaker) => (
+              <div key={speaker.name} className="col-lg-3 col-md-6 col-xs-12">
+                <div className="team-item wow fadeInUp" data-wow-delay="0.2s">
+                  <div className="team-img">
+                    <img className="img-fluid" src={speaker.image} alt="" />
+                    <div className="team-overlay">
+                      <div className="overlay-social-icon text-center">
+                        <ul className="social-icons">
+                          <li>
+                            <a href="#">
+                              <i
+                                className="lni lni-twitter-filled"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i
+                                className="lni lni-google"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i
+                                className="lni lni-facebook-filled"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i
+                                className="lni lni-pinterest"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="info-text">
-                  <h3>
-                    <a href="#">JONATHON DOE</a>
-                  </h3>
-                  <p>Product Designer, Tesla</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-xs-12">
-              <div className="team-item wow fadeInUp" data-wow-delay="0.4s">
-                <div className="team-img">
-                  <img className="img-fluid" src={team2} alt="" />
-                  <div className="team-overlay">
-                    <div className="overlay-social-icon text-center">
-                      <ul className="social-icons">
-                        <li>
-                          <a href="#">
-                            <i
-                              className="lni-twitter-filled"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="lni-google" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i
-                              className="lni-facebook-filled"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="lni-pinterest" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+                  <div className="info-text">
+                    <h3>
+                      <a href="#">{speaker.name}</a>
+                    </h3>
+                    <p>{speaker.title}</p>
                   </div>
                 </div>
-                <div className="info-text">
-                  <h3>
-                    <a href="#">Patric Green</a>
-                  </h3>
-                  <p>Front-end Developer</p>
-                </div>
               </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-xs-12">
-              <div className="team-item wow fadeInUp" data-wow-delay="0.6s">
-                <div className="team-img">
-                  <img className="img-fluid" src={team3} alt="" />
-                  <div className="team-overlay">
-                    <div className="overlay-social-icon text-center">
-                      <ul className="social-icons">
-                        <li>
-                          <a href="#">
-                            <i
-                              className="lni-twitter-filled"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="lni-google" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i
-                              className="lni-facebook-filled"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="lni-pinterest" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="info-text">
-                  <h3>
-                    <a href="#">Paul Kowalsy</a>
-                  </h3>
-                  <p>Lead Designer, TNW</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-xs-12">
-              <div className="team-item wow fadeInUp" data-wow-delay="0.8s">
-                <div className="team-img">
-                  <img className="img-fluid" src={team4} alt="" />
-                  <div className="team-overlay">
-                    <div className="overlay-social-icon text-center">
-                      <ul className="social-icons">
-                        <li>
-                          <a href="#">
-                            <i
-                              className="lni-twitter-filled"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="lni-google" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i
-                              className="lni-facebook-filled"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="lni-pinterest" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="info-text">
-                  <h3>
-                    <a href="#">Jhon Doe</a>
-                  </h3>
-                  <p>Back-end Developer, ASUS</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-xs-12">
-              <div className="team-item wow fadeInUp" data-wow-delay="1s">
-                <div className="team-img">
-                  <img className="img-fluid" src={team5} alt="" />
-                  <div className="team-overlay">
-                    <div className="overlay-social-icon text-center">
-                      <ul className="social-icons">
-                        <li>
-                          <a href="#">
-                            <i
-                              className="lni-twitter-filled"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="lni-google" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i
-                              className="lni-facebook-filled"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="lni-pinterest" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="info-text">
-                  <h3>
-                    <a href="#">Daryl Dixon</a>
-                  </h3>
-                  <p>Full-stack Developer, Google</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-xs-12">
-              <div className="team-item wow fadeInUp" data-wow-delay="1.2s">
-                <div className="team-img">
-                  <img className="img-fluid" src={team6} alt="" />
-                  <div className="team-overlay">
-                    <div className="overlay-social-icon text-center">
-                      <ul className="social-icons">
-                        <li>
-                          <a href="#">
-                            <i
-                              className="lni-twitter-filled"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="lni-google" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i
-                              className="lni-facebook-filled"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="lni-pinterest" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="info-text">
-                  <h3>
-                    <a href="#">Chris Adams</a>
-                  </h3>
-                  <p>UI Designer, Apple</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-xs-12">
-              <div className="team-item wow fadeInUp" data-wow-delay="1.4s">
-                <div className="team-img">
-                  <img className="img-fluid" src={team7} alt="" />
-                  <div className="team-overlay">
-                    <div className="overlay-social-icon text-center">
-                      <ul className="social-icons">
-                        <li>
-                          <a href="#">
-                            <i
-                              className="lni-twitter-filled"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="lni-google" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i
-                              className="lni-facebook-filled"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="lni-pinterest" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="info-text">
-                  <h3>
-                    <a href="#">Paul Kowalsy</a>
-                  </h3>
-                  <p>Lead Designer, TNW</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-xs-12">
-              <div className="team-item wow fadeInUp" data-wow-delay="1.6s">
-                <div className="team-img">
-                  <img className="img-fluid" src={team8} alt="" />
-                  <div className="team-overlay">
-                    <div className="overlay-social-icon text-center">
-                      <ul className="social-icons">
-                        <li>
-                          <a href="#">
-                            <i
-                              className="lni-twitter-filled"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="lni-google" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i
-                              className="lni-facebook-filled"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="lni-pinterest" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="info-text">
-                  <h3>
-                    <a href="#">Jhon Doe</a>
-                  </h3>
-                  <p>Back-end Developer, ASUS</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
           <a
-            href="#"
+            href="https://www.fbi.gov/wanted/topten"
+            target="_blank"
             className="btn btn-common mt-30 wow fadeInUp"
             data-wow-delay="1.9s"
           >
             Meet all speakers
           </a>
-        </div>
-      </section>
-
-      <section id="gallery" className="section-padding">
-        <div className="container-fluid">
-          <div className="contact-block">
-            <div className="text-center">
-              <h2>You are using Free Version</h2>
-              <h4>
-                Please, purchase full version to get all features and pages
-              </h4>
-              <br />
-              <b>Including:</b>
-              <p>- Different Homepage Variations</p>
-              <p>- All Elements and Features</p>
-              <p>- Documentation File</p>
-              <p>- Quick Support</p>
-              <p>- Permission to Use in Commercial Projects</p>
-              <p>- Footer Credit Removal</p>
-              <p>- Working Contact Form</p>
-              <br />
-              <a
-                href="https://rebrand.ly/eventup-purchase-ud"
-                target="_blank"
-                className="btn btn-common btn-lg"
-              >
-                Purchase Now
-              </a>
-            </div>
-          </div>{' '}
-        </div>
-      </section>
-
-      <section id="event-up" className="section-padding">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <div className="section-title-header text-center">
-                <h2
-                  className="section-title wow fadeInUp"
-                  data-wow-delay="0.2s"
-                >
-                  Upcoming Events
-                </h2>
-                <p className="wow fadeInDown" data-wow-delay="0.2s">
-                  Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum
-                  vocent mediocritatem an <br /> cule dicta iriure at phaedrum.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-3 col-md-6 col-xs-12">
-              <div className="event-item">
-                <img className="img-fluid" src={eventImg1} alt="" />
-                <div className="overlay-text">
-                  <div className="content">
-                    <h3>Business Confrence</h3>
-                    <a href="#">View details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-xs-12">
-              <div className="event-item">
-                <img className="img-fluid" src={img2} alt="" />
-                <div className="overlay-text">
-                  <div className="content">
-                    <h3>Designer Confrence</h3>
-                    <a href="#">View details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-xs-12">
-              <div className="event-item">
-                <img className="img-fluid" src={img3} alt="" />
-                <div className="overlay-text">
-                  <div className="content">
-                    <h3>Marketer Confrence</h3>
-                    <a href="#">View details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-xs-12">
-              <div className="event-item">
-                <img className="img-fluid" src={img4} alt="" />
-                <div className="overlay-text">
-                  <div className="content">
-                    <h3>JS Confrence</h3>
-                    <a href="#">View details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row mt-5">
-            <div className="col-12 text-center">
-              <a href="#" className="btn btn-common">
-                More Event
-              </a>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -1703,8 +1319,8 @@ export default function Index() {
                   Ticket Pricing
                 </h2>
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
-                  Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum
-                  vocent mediocritatem an <br /> cule dicta iriure at phaedrum.
+                  We have prioces for all budgets <br /> assuming it's the
+                  budget in a large global corp.
                 </p>
               </div>
             </div>
@@ -1719,34 +1335,45 @@ export default function Index() {
                   <h5>Basic Pass</h5>
                 </div>
                 <div className="price">
-                  <h2>$29</h2>
+                  <h2>$290</h2>
                   <span>Per Day</span>
                 </div>
                 <div className="pricing-list">
                   <ul>
                     <li>
-                      <i className="lni-check-mark-circle"></i>
+                      <i className="lni lni-checkmark-circle"></i>
                       <span className="text">Entrance</span>
                     </li>
                     <li>
-                      <i className="lni-check-mark-circle"></i>
+                      <i className="lni lni-checkmark-circle"></i>
                       <span className="text">Coffee Break</span>
                     </li>
                     <li>
-                      <i className="lni-check-mark-circle"></i>
+                      <i className="lni lni-checkmark-circle"></i>
                       <span className="text">Lunch on all days</span>
                     </li>
                     <li>
-                      <i className="lni-close"></i>
+                      <i className="lni lni-close"></i>
                       <span className="text">Access to all areas</span>
                     </li>
                     <li>
-                      <i className="lni-close"></i>
+                      <i className="lni lni-close"></i>
                       <span className="text">Certificate</span>
+                    </li>
+                    <li>
+                      <i className="lni lni-close"></i>
+                      <span className="text">Double Certificate</span>
+                    </li>
+                    <li>
+                      <i className="lni lni-close"></i>
+                      <span className="text">
+                        Hunt people who like automation like in the movie Hard
+                        Target
+                      </span>
                     </li>
                   </ul>
                 </div>
-                <a href="#" className="btn btn-common">
+                <a href="#contact-map" className="btn btn-common">
                   Buy Ticket
                 </a>
               </div>
@@ -1760,34 +1387,45 @@ export default function Index() {
                   <h5>Standard Pass</h5>
                 </div>
                 <div className="price">
-                  <h2>$40</h2>
+                  <h2>$400</h2>
                   <span>Per Day</span>
                 </div>
                 <div className="pricing-list">
                   <ul>
                     <li>
-                      <i className="lni-check-mark-circle"></i>
+                      <i className="lni lni-checkmark-circle"></i>
                       <span className="text">Entrance</span>
                     </li>
                     <li>
-                      <i className="lni-check-mark-circle"></i>
+                      <i className="lni lni-checkmark-circle"></i>
                       <span className="text">Coffee Break</span>
                     </li>
                     <li>
-                      <i className="lni-check-mark-circle"></i>
+                      <i className="lni lni-checkmark-circle"></i>
                       <span className="text">Lunch on all days</span>
                     </li>
                     <li>
-                      <i className="lni-close"></i>
+                      <i className="lni lni-close"></i>
                       <span className="text">Access to all areas</span>
                     </li>
                     <li>
-                      <i className="lni-check-mark-circle"></i>
+                      <i className="lni lni-checkmark-circle"></i>
                       <span className="text">Certificate</span>
+                    </li>
+                    <li>
+                      <i className="lni lni-close"></i>
+                      <span className="text">Double Certificate</span>
+                    </li>
+                    <li>
+                      <i className="lni lni-close"></i>
+                      <span className="text">
+                        Hunt people who like automation like in the movie Hard
+                        Target
+                      </span>
                     </li>
                   </ul>
                 </div>
-                <a href="#" className="btn btn-common">
+                <a href="#contact-map" className="btn btn-common">
                   Buy Ticket
                 </a>
               </div>
@@ -1801,30 +1439,41 @@ export default function Index() {
                   <h5>Premium Pass</h5>
                 </div>
                 <div className="price">
-                  <h2>$68</h2>
+                  <h2>$1000</h2>
                   <span>Per Day</span>
                 </div>
                 <div className="pricing-list">
                   <ul>
                     <li>
-                      <i className="lni-check-mark-circle"></i>
+                      <i className="lni lni-checkmark-circle"></i>
                       <span className="text">Entrance</span>
                     </li>
                     <li>
-                      <i className="lni-check-mark-circle"></i>
+                      <i className="lni lni-checkmark-circle"></i>
                       <span className="text">Coffee Break</span>
                     </li>
                     <li>
-                      <i className="lni-close"></i>
+                      <i className="lni lni-checkmark-circle"></i>
                       <span className="text">Lunch on all days</span>
                     </li>
                     <li>
-                      <i className="lni-check-mark-circle"></i>
+                      <i className="lni lni-checkmark-circle"></i>
                       <span className="text">Access to all areas</span>
                     </li>
                     <li>
-                      <i className="lni-check-mark-circle"></i>
+                      <i className="lni lni-checkmark-circle"></i>
                       <span className="text">Certificate</span>
+                    </li>
+                    <li>
+                      <i className="lni lni-checkmark-circle"></i>
+                      <span className="text">Double Certificate</span>
+                    </li>
+                    <li>
+                      <i className="lni lni-checkmark-circle"></i>
+                      <span className="text">
+                        Hunt people who like automation like in the movie Hard
+                        Target
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -1849,8 +1498,7 @@ export default function Index() {
                   Latest News
                 </h2>
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
-                  Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum
-                  vocent mediocritatem an <br /> cule dicta iriure at phaedrum.
+                  Here's what's happening in the ticketing world
                 </p>
               </div>
             </div>
@@ -1865,22 +1513,22 @@ export default function Index() {
                 </div>
                 <div className="descr">
                   <div className="icon">
-                    <i className="lni-image"></i>
+                    <i className="lni lni-image"></i>
                   </div>
                   <h3 className="title">
                     <a href="#">Learn Something New</a>
                   </h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipsing elit, sed
-                    do eiusmodincididunt ut labore et dolore
+                    Ticketing systems and circuses never seemed to have too much
+                    in common... until now!
                   </p>
                 </div>
                 <div className="meta-tags">
                   <span className="date">
-                    <i className="lni-calendar"></i> Jan 20, 2020
+                    <i className="lni lni-calendar"></i> Jan 20, 2021
                   </span>
                   <span className="comments">
-                    <i className="lni-comment-alt"></i>{' '}
+                    <i className="lni lni-comment-alt"></i>{' '}
                     <a href="#"> 0 Comment</a>
                   </span>
                 </div>
@@ -1895,22 +1543,22 @@ export default function Index() {
                 </div>
                 <div className="descr">
                   <div className="icon">
-                    <i className="lni-arrow-right"></i>
+                    <i className="lni lni-arrow-right"></i>
                   </div>
                   <h3 className="title">
                     <a href="#">Call for sponsors</a>
                   </h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipsing elit, sed
-                    do eiusmodincididunt ut labore et dolore
+                    Give us money and we'll convince people you are good and
+                    wholesome.
                   </p>
                 </div>
                 <div className="meta-tags">
                   <span className="date">
-                    <i className="lni-calendar"></i> Jan 20, 2020
+                    <i className="lni lni-calendar"></i> March 15, 2021
                   </span>
                   <span className="comments">
-                    <i className="lni-comment-alt"></i>{' '}
+                    <i className="lni lni-comment-alt"></i>{' '}
                     <a href="#"> 0 Comment</a>
                   </span>
                 </div>
@@ -1925,29 +1573,33 @@ export default function Index() {
                 </div>
                 <div className="descr">
                   <div className="icon">
-                    <i className="lni-camera"></i>
+                    <i className="lni lni-camera"></i>
                   </div>
                   <h3 className="title">
-                    <a href="#">Elon Musk joining the event</a>
+                    <a href="#">How ticketing systems saved my marriage</a>
                   </h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipsing elit, sed
-                    do eiusmodincididunt ut labore et dolore
+                    I almost closed that ticket with no explanation but a quirky
+                    bug in the ticketing system changed everything.
                   </p>
                 </div>
                 <div className="meta-tags">
                   <span className="date">
-                    <i className="lni-calendar"></i> Jan 20, 2020
+                    <i className="lni lni-calendar"></i> April 2, 2021
                   </span>
                   <span className="comments">
-                    <i className="lni-comment-alt"></i>{' '}
+                    <i className="lni lni-comment-alt"></i>{' '}
                     <a href="#"> 0 Comment</a>
                   </span>
                 </div>
               </div>
             </div>
             <div className="col-12 text-center">
-              <a href="#" className="btn btn-common">
+              <a
+                href="https://allthatsinteresting.com/horror-stories"
+                target="_blank"
+                className="btn btn-common"
+              >
                 View all Blog
               </a>
             </div>
@@ -1975,8 +1627,8 @@ export default function Index() {
                   Sponsors
                 </h2>
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
-                  Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum
-                  vocent mediocritatem an <br /> cule dicta iriure at phaedrum.
+                  A big thank you to all our sponsors for supporting ticketing
+                  culture!
                 </p>
               </div>
             </div>
@@ -1999,21 +1651,6 @@ export default function Index() {
                 <a href="">
                   <img src={logo4} alt="logo4" />
                 </a>
-                <a href="">
-                  <img src={logo5} alt="logo5" />
-                </a>
-                <a href="">
-                  <img src={logo6} alt="logo6" />
-                </a>
-                <a href="">
-                  <img src={logo7} alt="logo7" />
-                </a>
-                <a href="">
-                  <img src={logo8} alt="logo8" />
-                </a>
-                <a href="">
-                  <img src={logo9} alt="logo9" />
-                </a>
               </div>
             </div>
           </div>
@@ -2032,9 +1669,14 @@ export default function Index() {
                   Contact Us
                 </h2>
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
-                  Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum
-                  vocent mediocritatem an <br /> cule dicta iriure at phaedrum.
+                  Please fill out the form below which will create a ticket in
+                  our system to send you a ticket if you choose the "I want to
+                  buy a ticket" option.
                 </p>
+                <h6>
+                  We have a 5 day SLA for responding to requests for tickets
+                </h6>
+                <img className="img-fluid wink" src={winkImg} alt="" />
               </div>
             </div>
           </div>
@@ -2095,6 +1737,62 @@ export default function Index() {
                           <div className="help-block with-errors"></div>
                         </div>
                       </div>
+                      <div className="col-md-12 form-line">
+                        <div className="form-group">
+                          <input
+                            type="text"
+                            className="form-control"
+                            id="msg_ticket"
+                            name="ticket"
+                            placeholder="I want to buy a ticket"
+                            required
+                            data-error="Please enter whether or not you want to buy a ticket"
+                          />
+                          <div className="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div className="col-md-12 form-line">
+                        <div className="form-group">
+                          <input
+                            type="text"
+                            className="form-control"
+                            id="msg_family"
+                            name="family"
+                            placeholder="Exacly how may people are in your entire family?"
+                            required
+                            data-error="Please enter whether how many people are in your family"
+                          />
+                          <div className="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div className="col-md-12 form-line">
+                        <div className="form-group">
+                          <input
+                            type="text"
+                            className="form-control"
+                            id="msg_color"
+                            name="color"
+                            placeholder="What is your favourite colour?"
+                            required
+                            data-error="Please enter your favourite colour"
+                          />
+                          <div className="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div className="col-md-12 form-line">
+                        <div className="form-group">
+                          <input
+                            type="text"
+                            className="form-control"
+                            id="msg_riddle"
+                            name="riddle"
+                            placeholder="You answer me, although I never ask you questions. What am I?"
+                            required
+                            data-error="Please answer that question"
+                          />
+                          <div className="help-block with-errors"></div>
+                        </div>
+                      </div>
                       <div className="col-md-12">
                         <div className="form-group">
                           <textarea
@@ -2111,6 +1809,11 @@ export default function Index() {
                             type="submit"
                             className="btn btn-common"
                             id="form-submit"
+                            onClick={() => {
+                              alert(
+                                'Congratulations. Your ticket to contact us has been closed. Reason: None given.'
+                              )
+                            }}
                           >
                             <i
                               className="fa fa-paper-plane"
@@ -2152,27 +1855,27 @@ export default function Index() {
             <div className="col-lg-4 col-md-5 col-xs-12">
               <ul>
                 <li>
-                  <i className="lni-home"></i>
+                  <i className="lni lni-home"></i>
                 </li>
                 <li>
-                  <span>Cesare Rosaroll, 118 80139 Eventine</span>
-                </li>
-              </ul>
-            </div>
-            <div className="col-lg-4 col-md-3 col-xs-12">
-              <ul>
-                <li>
-                  <i className="lni-phone"></i>
-                </li>
-                <li>
-                  <span>+789 123 456 79</span>
+                  <span>Submitter McTicket</span>
                 </li>
               </ul>
             </div>
             <div className="col-lg-4 col-md-3 col-xs-12">
               <ul>
                 <li>
-                  <i className="lni-envelope"></i>
+                  <i className="lni lni-phone"></i>
+                </li>
+                <li>
+                  <span>+01 234 567 89</span>
+                </li>
+              </ul>
+            </div>
+            <div className="col-lg-4 col-md-3 col-xs-12">
+              <ul>
+                <li>
+                  <i className="lni lni-envelope"></i>
                 </li>
                 <li>
                   <span>Support@example.com</span>

@@ -3,7 +3,6 @@ import { Meta, Links, Scripts, useRouteData } from '@remix-run/react'
 import { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
 
-import bootstrapStyle from './css/bootstrap.min.css'
 import nivoLightboxStyle from './css/nivo-lightbox.css'
 import animateStyle from './css/animate.css'
 import mainStyle from './css/main.css'
@@ -28,7 +27,11 @@ export let links: LinksFunction = () => {
       href: 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto:500,700',
     },
     { rel: 'stylesheet', href: 'https://cdn.lineicons.com/2.0/LineIcons.css' },
-    { rel: 'stylesheet', href: bootstrapStyle },
+    {
+      rel: 'stylesheet',
+      href:
+        'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css',
+    },
     { rel: 'stylesheet', href: nivoLightboxStyle },
     { rel: 'stylesheet', href: animateStyle },
     { rel: 'stylesheet', href: mainStyle },
@@ -54,15 +57,6 @@ export default function App() {
     require('./js/jquery.easing.min.js')
     require('./js/nivo-lightbox.js')
     require('./js/video.js')
-
-    const WOW = require('wowjs')
-
-    var wow = new WOW.WOW({
-      mobile: false,
-      live: false
-    })
-    wow.init()
-
     require('./js/main.js')
   }, [])
 
@@ -81,7 +75,7 @@ export default function App() {
         <header id="header-wrap">
           <nav className="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
             <div className="container">
-              <a href="index.html" className="navbar-brand">
+              <a href="/" className="navbar-brand">
                 <img src={logo} alt="logo" />
               </a>
               <button
@@ -93,7 +87,7 @@ export default function App() {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                <i className="lni-menu"></i>
+                <i className="lni lni-menu"></i>
               </button>
               <div className="collapse navbar-collapse" id="navbarCollapse">
                 <ul className="navbar-nav mr-auto w-100 justify-content-end">
@@ -109,7 +103,7 @@ export default function App() {
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="#schedules">
-                      schedules
+                      Schedules
                     </a>
                   </li>
                   <li className="nav-item">
@@ -118,13 +112,8 @@ export default function App() {
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#gallery">
-                      Gallery
-                    </a>
-                  </li>
-                  <li className="nav-item">
                     <a className="nav-link" href="#pricing">
-                      pricing
+                      Pricing
                     </a>
                   </li>
                   <li className="nav-item">
@@ -148,6 +137,7 @@ export default function App() {
             style={{
               backgroundImage: `url(${heroBG})`,
               backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
             }}
           >
             <div className="overlay"></div>
@@ -156,19 +146,20 @@ export default function App() {
                 <div className="col-lg-9 col-sm-12">
                   <div className="contents text-center">
                     <div className="icon">
-                      <i className="lni-mic"></i>
+                      <i className="lni lni-mic"></i>
                     </div>
                     <p className="banner-info">
-                      15, Oct 2020 - Maria Hall, NY, United states
+                      23, Aug 2021 - Kafka Hall, NY, United states
                     </p>
-                    <h2 className="head-title">Developers Conference</h2>
+                    <h2 className="head-title">Ticket Conference</h2>
                     <p className="banner-desc">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Sapiente, nobis nesciunt atque perferendis, ipsa
-                      doloremque deserunt cum qui.
+                      A place for ticket culture enthusiasts. Tickets are eating
+                      the world. We are the pioneers bringing true value to the
+                      industries of today ensuring everybody understands the
+                      power of the ticket.
                     </p>
                     <div className="banner-btn">
-                      <a href="#" className="btn btn-common">
+                      <a href="#contact-map" className="btn btn-common">
                         Get Ticket
                       </a>
                     </div>
@@ -191,7 +182,7 @@ export default function App() {
                   className="subscribe-inner wow fadeInDown"
                   data-wow-delay="0.3s"
                 >
-                  <h2 className="subscribe-title">To Get Nearly Updates</h2>
+                  <h2 className="subscribe-title">To Get Updates</h2>
                   <form className="text-center form-inline">
                     <input
                       className="mb-20 form-control"
@@ -205,9 +196,14 @@ export default function App() {
                       data-spinner-size="30"
                       name="submit"
                       id="submit"
+                      onClick={() => {
+                        alert(
+                          'Congratulations. Your ticket to request updates has been closed. Reason: None given.'
+                        )
+                      }}
                     >
                       <span className="ladda-label">
-                        <i className="lni-check-box"></i> Subscribe
+                        <i className="lni lni-check-box"></i> Subscribe
                       </span>
                     </button>
                   </form>
@@ -218,18 +214,18 @@ export default function App() {
                 <div className="social-icons-footer">
                   <ul>
                     <li className="facebook">
-                      <a target="_blank" href="3">
-                        <i className="lni-facebook-filled"></i>
+                      <a target="_blank" href="#">
+                        <i className="lni lni-facebook-filled"></i>
                       </a>
                     </li>
                     <li className="twitter">
-                      <a target="_blank" href="3">
-                        <i className="lni-twitter-filled"></i>
+                      <a target="_blank" href="#">
+                        <i className="lni lni-twitter-filled"></i>
                       </a>
                     </li>
                     <li className="pinterest">
-                      <a target="_blank" href="3">
-                        <i className="lni-pinterest"></i>
+                      <a target="_blank" href="#">
+                        <i className=" lni lni-pinterest"></i>
                       </a>
                     </li>
                   </ul>
@@ -243,7 +239,7 @@ export default function App() {
         </footer>
 
         <a href="#" className="back-to-top">
-          <i className="lni-chevron-up"></i>
+          <i className="lni lni-chevron-up"></i>
         </a>
 
         <div id="preloader">
