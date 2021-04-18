@@ -7,7 +7,7 @@
     "postinstall": "npm run build",
     "build": "remix build2",
     "dev": "concurrently \"remix run2\" \"vercel dev\"",
-    "deploy": "vercel --prod",
+    "deploy": "vercel",
     "clean": "del .cache build public/build"
   },
   "dependencies": {
@@ -43,7 +43,7 @@
     "vercel": "^21.2.2"
   },
   "engines": {
-    "node": "14.x"
+    "node": ">=12"
   },
   "sideEffects": false
 }
