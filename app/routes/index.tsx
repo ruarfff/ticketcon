@@ -8,29 +8,21 @@ import logo3 from '../img/sponsors/atlassian.png'
 import logo4 from '../img/sponsors/remedy.png'
 
 import img1 from '../img/about/img1.png'
-import img2 from '../img/event/img2.jpg'
-import img3 from '../img/event/img3.jpg'
-import img4 from '../img/event/img4.jpg'
 
 import speaker1 from '../img/speaker/speakers-1.jpg'
 import speaker2 from '../img/speaker/speakers-2.jpg'
 import speaker3 from '../img/speaker/speakers-3.jpg'
 
+import dante from '../img/speaker/dante.jpg'
+import arnimzola from '../img/speaker/arnimzola.png'
+import pinhead from '../img/speaker/pinhead.jpg'
+import krang from '../img/speaker/krang.jpg'
+import antax from '../img/speaker/antax.jpg'
+
 import trump from '../img/speaker/trump.jpg'
 import jong from '../img/speaker/jong.jpg'
 import koch from '../img/speaker/koch.jpg'
 import murdock from '../img/speaker/rupert-murdoch.jpg'
-
-import team1 from '../img/team/team-01.jpg'
-import team2 from '../img/team/team-02.jpg'
-import team3 from '../img/team/team-03.jpg'
-import team4 from '../img/team/team-04.jpg'
-import team5 from '../img/team/team-05.jpg'
-import team6 from '../img/team/team-06.jpg'
-import team7 from '../img/team/team-07.jpg'
-import team8 from '../img/team/team-08.jpg'
-
-import eventImg1 from '../img/event/img1.jpg'
 
 import blogImg1 from '../img/blog/img-1.jpg'
 import blogImg2 from '../img/blog/img-2.jpg'
@@ -370,8 +362,10 @@ export default function Index() {
                   Event Schedules
                 </h2>
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
-                  Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum
-                  vocent mediocritatem an <br /> cule dicta iriure at phaedrum.
+                  Learn from the best in this amazing array of workshops from
+                  the top names in the industry <br /> Note: You must{' '}
+                  <a href="#contact-map">open a ticket</a> to get access to an
+                  event.
                 </p>
               </div>
             </div>
@@ -391,7 +385,7 @@ export default function Index() {
                   >
                     <div className="item-text">
                       <h4>Day 01</h4>
-                      <h5>14 February 2020</h5>
+                      <h5>23 August 2021</h5>
                     </div>
                   </a>
                 </li>
@@ -406,7 +400,7 @@ export default function Index() {
                   >
                     <div className="item-text">
                       <h4>Day 02</h4>
-                      <h5>15 February 2020</h5>
+                      <h5>24 August 2021</h5>
                     </div>
                   </a>
                 </li>
@@ -421,22 +415,7 @@ export default function Index() {
                   >
                     <div className="item-text">
                       <h4>Day 03</h4>
-                      <h5>16 February 2020</h5>
-                    </div>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className="nav-link"
-                    id="thursday-tab"
-                    data-toggle="tab"
-                    href="#thursday"
-                    role="tab"
-                    aria-controls="thursday"
-                  >
-                    <div className="item-text">
-                      <h4>Day 04</h4>
-                      <h5>17 February 2020</h5>
+                      <h5>25 August 2021</h5>
                     </div>
                   </a>
                 </li>
@@ -449,757 +428,158 @@ export default function Index() {
               >
                 <div className="schedule-tab-content col-12 clearfix">
                   <div className="tab-content" id="myTabContent">
-                    <div
-                      className="tab-pane fade show active"
-                      id="monday"
-                      role="tabpanel"
-                      aria-labelledby="monday-tab"
-                    >
-                      <div id="accordion">
-                        <div className="card">
-                          <div id="headingOne">
-                            <div className="schedule-slot-time">
-                              <span> 9.30 - 10.30 AM</span>
-                              Workshop
-                            </div>
+                    {[
+                      {
+                        day: 'monday',
+                        events: [
+                          {
+                            show: true,
+                            time: '9.30 - 10.30 AM',
+                            title: 'The Divine Ticket Comedy',
+                            description:
+                              'Are you and your team constantly trying to get to ticket paradise but seem to be stuck in ticket purgatory? In this session you will learn techniques to keep your team on the right track, maximising ticket production and sending anti tickets, self service loving detractors straight to the inferno.',
+                            location: 'Purgatorio Room, 1st Floor.',
+                            speaker: { image: dante, name: 'Dante Alighieri' },
+                          },
+                          {
+                            time: '10.30 - 11.30 AM',
+                            title:
+                              '9 Heads (Ticketing Systems) are Better Than One',
+                            description:
+                              "Any good ticket aficionado knows that a single source of truth only means a single source of failure and responsibility. By leveraging many systems at once, e.g. Remedy, ServiceNow and Jira, you keep the ticket skills in your company sharp and the numbers of tickets high. In this session you will learn the techniques to properly employ multiple systems simultaneously. How to randomly pick which one to respond to each day and how to appropriately punish those who can't figure out the right system to use at any given time.",
+                            location: 'The Paperclip Room, 2nd Floor.',
+                            speaker: { image: arnimzola, name: 'Arnim Zola' },
+                          },
+                          {
+                            time: '11.30 - 12.30 AM',
+                            title: 'Mastering the Art of the Ticket',
+                            description:
+                              'There has been a troubling trend in our industry towards making tickets "simpler" or "easy". This is wrong. In this session we will look at how to make a ticket so beautiful and complex it could act as a Lemarchand Configuration with the power to summon the Cenobites. Let us bring life back to the art that is a ticket configuration and sort the weak from the strong in our organisations.',
+                            location: 'The Toll Room, 1st Floor',
+                            speaker: { image: pinhead, name: 'Pinhead' },
+                          },
+                        ],
+                      },
+                      {
+                        day: 'tuesday',
+                        events: [
+                          {
+                            show: true,
+                            time: '9.30 - 10.30 AM',
+                            title: 'Not Smart Enough',
+                            description:
+                              "No one, nothing is smarter than The Krang. That said, you, a ticket author, may come close. We will look at how to make the smartest tickets possible. So smart that you can easily spot your idiot coworkers who don't know how to fill it in correctly. Learn how to spot an idiot ticket and how to feel justified in immediately closing it without explanation.",
+                            location: 'Technodrome Room, 2nd Floor',
+                            speaker: { image: krang, name: 'Krang' },
+                          },
+                          {
+                            time: '10.30 - 11.30 AM',
+                            title: 'The Ticket Swamp of Sadness',
+                            description:
+                              "Your colleagues need to be more like Atreyu when it comes to tickets. Much like the swamp of sadness, they need to really believe to get through the processes we create. My role was to show what happens to those who stop believing. You think all these tickets are useless? You stop listening to the ticket-masters? Gloop! You're gone. In this session we will look at how to ensure you weed out all the non believers and your organisation becomes, in the truest sense, a Swamp of Sadness.",
+                            location: 'The Never-ending Room, 1st Floor',
+                            speaker: { image: antax, name: 'Artax' },
+                          },
+                          {
+                            time: '11.30 - 12.30 AM',
+                            title: 'TBD 1',
+                            description: 'TBD',
+                            location: 'someplace',
+                            speaker: { image: speaker3, name: 'TBD 1' },
+                          },
+                        ],
+                      },
+                      {
+                        day: 'wednesday',
+                        events: [
+                          {
+                            show: true,
+                            time: '9.30 - 10.30 AM',
+                            title: 'TBD 2',
+                            description: 'TBD',
+                            location: 'someplace',
+                            speaker: { image: speaker1, name: 'TBD 2' },
+                          },
+                          {
+                            time: '10.30 - 11.30 AM',
+                            title: 'TBD 3',
+                            description: 'TBD',
+                            location: 'someplace',
+                            speaker: { image: speaker2, name: 'TBD 3' },
+                          },
+                          {
+                            time: '11.30 - 12.30 AM',
+                            title: 'TBD 4',
+                            description: 'TBD',
+                            location: 'someplace',
+                            speaker: { image: speaker3, name: 'TBD 4' },
+                          },
+                        ],
+                      },
+                    ].map((day, idx) => (
+                      <div
+                        key={day.day}
+                        className={`tab-pane fade ${
+                          idx == 0 ? 'show active' : ''
+                        }`}
+                        id={day.day}
+                        role="tabpanel"
+                        aria-labelledby={day.day + '-tab'}
+                      >
+                        <div id={`accordion${idx}`}>
+                          {day.events.map((event, i) => (
                             <div
-                              className="collapsed card-header"
-                              data-toggle="collapse"
-                              data-target="#collapseOne"
-                              aria-expanded="false"
-                              aria-controls="collapseOne"
+                              className="card"
+                              key={`${event.title}${idx}${i}`}
                             >
-                              <div className="images-box">
-                                <img
-                                  className="img-fluid"
-                                  src={speaker1}
-                                  alt=""
-                                />
+                              <div id={`heading${idx}${i}`}>
+                                <div className="schedule-slot-time">
+                                  <span>{event.time} </span>
+                                  Workshop
+                                </div>
+                                <div
+                                  className="collapsed card-header"
+                                  data-toggle="collapse"
+                                  data-target={`#collapse${idx}${i}`}
+                                  aria-expanded="false"
+                                  aria-controls={`collapse${idx}${i}`}
+                                >
+                                  <div className="images-box">
+                                    <img
+                                      className="img-fluid"
+                                      src={event.speaker.image}
+                                      alt=""
+                                    />
+                                  </div>
+                                  <h4>{event.title}</h4>
+                                  <h5 className="name">{event.speaker.name}</h5>
+                                </div>
                               </div>
-                              <h4>Web Design Principles and Best Practices</h4>
-                              <h5 className="name">David Warner</h5>
-                            </div>
-                          </div>
-                          <div
-                            id="collapseOne"
-                            className="collapse show"
-                            aria-labelledby="headingOne"
-                            data-parent="#accordion"
-                          >
-                            <div className="card-body">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet minima dolores rerum
-                                maiores qui at commodi quas, reprehenderit eius
-                                consectetur quae magni molestias veniam,
-                                provident illum facere iure libero asperiores!
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Veniam earum nihil ex ipsa
-                                magni eligendi fugiat assumenda suscipit,
-                                accusantium, necessitatibus reiciendis odit sed,
-                                vero amet blanditiis?
-                              </p>
-                              <div className="location">
-                                <span>Location:</span> Hall 1 , Building A,
-                                Golden Street, Southafrica
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="card">
-                          <div id="headingTwo">
-                            <div className="schedule-slot-time">
-                              <span> 10.30 - 11.30 AM</span>
-                              Workshop
-                            </div>
-                            <div
-                              className="collapsed card-header"
-                              data-toggle="collapse"
-                              data-target="#collapseTwo"
-                              aria-expanded="false"
-                              aria-controls="collapseTwo"
-                            >
-                              <div className="images-box">
-                                <img
-                                  className="img-fluid"
-                                  src={speaker2}
-                                  alt=""
-                                />
-                              </div>
-                              <h4>15 Free Productive Design Tools</h4>
-                              <h5 className="name">David Warner</h5>
-                            </div>
-                          </div>
-                          <div
-                            id="collapseTwo"
-                            className="collapse"
-                            aria-labelledby="headingTwo"
-                            data-parent="#accordion"
-                          >
-                            <div className="card-body">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet minima dolores rerum
-                                maiores qui at commodi quas, reprehenderit eius
-                                consectetur quae magni molestias veniam,
-                                provident illum facere iure libero asperiores!
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Veniam earum nihil ex ipsa
-                                magni eligendi fugiat assumenda suscipit,
-                                accusantium, necessitatibus reiciendis odit sed,
-                                vero amet blanditiis?
-                              </p>
-                              <div className="location">
-                                <span>Location:</span> Hall 1 , Building A,
-                                Golden Street, Southafrica
+                              <div
+                                id={`collapse${idx}${i}`}
+                                className={`collapse show`}
+                                aria-labelledby={`heading${idx}${i}`}
+                                data-parent={`accordion${idx}`}
+                              >
+                                <div className="card-body">
+                                  <p>{event.description}</p>
+                                  <div className="location">
+                                    <span>Location:</span> {event.location}
+                                  </div>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                        <div className="card">
-                          <div id="headingThree">
-                            <div className="schedule-slot-time">
-                              <span> 11.30 - 12.30 AM</span>
-                              Workshop
-                            </div>
-                            <div
-                              className="collapsed card-header"
-                              data-toggle="collapse"
-                              data-target="#collapseThree"
-                              aria-expanded="false"
-                              aria-controls="collapseThree"
-                            >
-                              <div className="images-box">
-                                <img
-                                  className="img-fluid"
-                                  src={speaker3}
-                                  alt=""
-                                />
-                              </div>
-                              <h4>Getting Started With SketchApp</h4>
-                              <h5 className="name">David Warner</h5>
-                            </div>
-                          </div>
-                          <div
-                            id="collapseThree"
-                            className="collapse"
-                            aria-labelledby="headingThree"
-                            data-parent="#accordion"
-                          >
-                            <div className="card-body">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet minima dolores rerum
-                                maiores qui at commodi quas, reprehenderit eius
-                                consectetur quae magni molestias veniam,
-                                provident illum facere iure libero asperiores!
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Veniam earum nihil ex ipsa
-                                magni eligendi fugiat assumenda suscipit,
-                                accusantium, necessitatibus reiciendis odit sed,
-                                vero amet blanditiis?
-                              </p>
-                              <div className="location">
-                                <span>Location:</span> Hall 1 , Building A,
-                                Golden Street, Southafrica
-                              </div>
-                            </div>
-                          </div>
+                          ))}
                         </div>
                       </div>
-                    </div>
-                    <div
-                      className="tab-pane fade"
-                      id="tuesday"
-                      role="tabpanel"
-                      aria-labelledby="tuesday-tab"
-                    >
-                      <div id="accordion2">
-                        <div className="card">
-                          <div id="headingOne1">
-                            <div className="schedule-slot-time">
-                              <span> 1.30 - 2.30 AM</span>
-                              Workshop
-                            </div>
-                            <div
-                              className="collapsed card-header"
-                              data-toggle="collapse"
-                              data-target="#collapseTwo2"
-                              aria-expanded="false"
-                              aria-controls="collapseTwo2"
-                            >
-                              <div className="images-box">
-                                <img
-                                  className="img-fluid"
-                                  src={speaker2}
-                                  alt=""
-                                />
-                              </div>
-                              <h4>Web Design Principles and Best Practices</h4>
-                              <h5 className="name">David Warner</h5>
-                            </div>
-                          </div>
-                          <div
-                            id="collapseOne1"
-                            className="collapse show"
-                            aria-labelledby="headingOne1"
-                            data-parent="#accordion2"
-                          >
-                            <div className="card-body">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet minima dolores rerum
-                                maiores qui at commodi quas, reprehenderit eius
-                                consectetur quae magni molestias veniam,
-                                provident illum facere iure libero asperiores!
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Veniam earum nihil ex ipsa
-                                magni eligendi fugiat assumenda suscipit,
-                                accusantium, necessitatibus reiciendis odit sed,
-                                vero amet blanditiis?
-                              </p>
-                              <div className="location">
-                                <span>Location:</span> Hall 1 , Building A,
-                                Golden Street, Southafrica
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="card">
-                          <div id="headingTwo2">
-                            <div className="schedule-slot-time">
-                              <span> 9.30 - 10.30 AM</span>
-                              Workshop
-                            </div>
-                            <div
-                              className="collapsed card-header"
-                              data-toggle="collapse"
-                              data-target="#collapseOne1"
-                              aria-expanded="false"
-                              aria-controls="collapseOne1"
-                            >
-                              <div className="images-box">
-                                <img
-                                  className="img-fluid"
-                                  src={speaker1}
-                                  alt=""
-                                />
-                              </div>
-                              <h4>Web Design Principles and Best Practices</h4>
-                              <h5 className="name">David Warner</h5>
-                            </div>
-                          </div>
-                          <div
-                            id="collapseTwo2"
-                            className="collapse"
-                            aria-labelledby="headingTwo2"
-                            data-parent="#accordion2"
-                          >
-                            <div className="card-body">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet minima dolores rerum
-                                maiores qui at commodi quas, reprehenderit eius
-                                consectetur quae magni molestias veniam,
-                                provident illum facere iure libero asperiores!
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Veniam earum nihil ex ipsa
-                                magni eligendi fugiat assumenda suscipit,
-                                accusantium, necessitatibus reiciendis odit sed,
-                                vero amet blanditiis?
-                              </p>
-                              <div className="location">
-                                <span>Location:</span> Hall 1 , Building A,
-                                Golden Street, Southafrica
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="tab-pane fade"
-                      id="wednesday"
-                      role="tabpanel"
-                      aria-labelledby="wednesday-tab"
-                    >
-                      <div id="accordion3">
-                        <div className="card">
-                          <div id="headingOne3">
-                            <div className="schedule-slot-time">
-                              <span> 10.30 - 11.30 AM</span>
-                              Workshop
-                            </div>
-                            <div
-                              className="collapsed card-header"
-                              data-toggle="collapse"
-                              data-target="#collapseOne3"
-                              aria-expanded="false"
-                              aria-controls="collapseOne3"
-                            >
-                              <div className="images-box">
-                                <img
-                                  className="img-fluid"
-                                  src={speaker1}
-                                  alt=""
-                                />
-                              </div>
-                              <h4>Web Design Principles and Best Practices</h4>
-                              <h5 className="name">David Warner</h5>
-                            </div>
-                          </div>
-                          <div
-                            id="collapseOne3"
-                            className="collapse show"
-                            aria-labelledby="headingOne3"
-                            data-parent="#accordion3"
-                          >
-                            <div className="card-body">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet minima dolores rerum
-                                maiores qui at commodi quas, reprehenderit eius
-                                consectetur quae magni molestias veniam,
-                                provident illum facere iure libero asperiores!
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Veniam earum nihil ex ipsa
-                                magni eligendi fugiat assumenda suscipit,
-                                accusantium, necessitatibus reiciendis odit sed,
-                                vero amet blanditiis?
-                              </p>
-                              <div className="location">
-                                <span>Location:</span> Hall 1 , Building A,
-                                Golden Street, Southafrica
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="card">
-                          <div id="headingTwo3">
-                            <div className="schedule-slot-time">
-                              <span> 11.30 - 12.30 AM</span>
-                              Workshop
-                            </div>
-                            <div
-                              className="collapsed card-header"
-                              data-toggle="collapse"
-                              data-target="#collapseTwo3"
-                              aria-expanded="false"
-                              aria-controls="collapseTwo3"
-                            >
-                              <div className="images-box">
-                                <img
-                                  className="img-fluid"
-                                  src={speaker2}
-                                  alt=""
-                                />
-                              </div>
-                              <h4>Web Design Principles and Best Practices</h4>
-                              <h5 className="name">David Warner</h5>
-                            </div>
-                          </div>
-                          <div
-                            id="collapseTwo3"
-                            className="collapse"
-                            aria-labelledby="headingTwo3"
-                            data-parent="#accordion3"
-                          >
-                            <div className="card-body">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet minima dolores rerum
-                                maiores qui at commodi quas, reprehenderit eius
-                                consectetur quae magni molestias veniam,
-                                provident illum facere iure libero asperiores!
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Veniam earum nihil ex ipsa
-                                magni eligendi fugiat assumenda suscipit,
-                                accusantium, necessitatibus reiciendis odit sed,
-                                vero amet blanditiis?
-                              </p>
-                              <div className="location">
-                                <span>Location:</span> Hall 1 , Building A,
-                                Golden Street, Southafrica
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="card">
-                          <div id="headingThree3">
-                            <div className="schedule-slot-time">
-                              <span> 1.30 - 2.30 AM</span>
-                              Workshop
-                            </div>
-                            <div
-                              className="collapsed card-header"
-                              data-toggle="collapse"
-                              data-target="#collapseThree3"
-                              aria-expanded="false"
-                              aria-controls="collapseThree3"
-                            >
-                              <div className="images-box">
-                                <img
-                                  className="img-fluid"
-                                  src={speaker3}
-                                  alt=""
-                                />
-                              </div>
-                              <h4>Web Design Principles and Best Practices</h4>
-                              <h5 className="name">David Warner</h5>
-                            </div>
-                          </div>
-                          <div
-                            id="collapseThree3"
-                            className="collapse"
-                            aria-labelledby="headingThree3"
-                            data-parent="#accordion3"
-                          >
-                            <div className="card-body">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet minima dolores rerum
-                                maiores qui at commodi quas, reprehenderit eius
-                                consectetur quae magni molestias veniam,
-                                provident illum facere iure libero asperiores!
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Veniam earum nihil ex ipsa
-                                magni eligendi fugiat assumenda suscipit,
-                                accusantium, necessitatibus reiciendis odit sed,
-                                vero amet blanditiis?
-                              </p>
-                              <div className="location">
-                                <span>Location:</span> Hall 1 , Building A,
-                                Golden Street, Southafrica
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="tab-pane fade"
-                      id="thursday"
-                      role="tabpanel"
-                      aria-labelledby="thursday-tab"
-                    >
-                      <div id="accordion4">
-                        <div className="card">
-                          <div id="headingOne">
-                            <div className="schedule-slot-time">
-                              <span> 9.30 - 10.30 AM</span>
-                              Workshop
-                            </div>
-                            <div
-                              className="collapsed card-header"
-                              data-toggle="collapse"
-                              data-target="#collapseOne4"
-                              aria-expanded="false"
-                              aria-controls="collapseOne4"
-                            >
-                              <div className="images-box">
-                                <img
-                                  className="img-fluid"
-                                  src={speaker2}
-                                  alt=""
-                                />
-                              </div>
-                              <h4>Web Design Principles and Best Practices</h4>
-                              <h5 className="name">David Warner</h5>
-                            </div>
-                          </div>
-                          <div
-                            id="collapseOne4"
-                            className="collapse show"
-                            aria-labelledby="headingOne"
-                            data-parent="#accordion4"
-                          >
-                            <div className="card-body">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet minima dolores rerum
-                                maiores qui at commodi quas, reprehenderit eius
-                                consectetur quae magni molestias veniam,
-                                provident illum facere iure libero asperiores!
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Veniam earum nihil ex ipsa
-                                magni eligendi fugiat assumenda suscipit,
-                                accusantium, necessitatibus reiciendis odit sed,
-                                vero amet blanditiis?
-                              </p>
-                              <div className="location">
-                                <span>Location:</span> Hall 1 , Building A,
-                                Golden Street, Southafrica
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="card">
-                          <div id="headingTwo">
-                            <div className="schedule-slot-time">
-                              <span> 10.30 - 11.30 AM</span>
-                              Workshop
-                            </div>
-                            <div
-                              className="collapsed card-header"
-                              data-toggle="collapse"
-                              data-target="#collapseTwo4"
-                              aria-expanded="false"
-                              aria-controls="collapseTwo4"
-                            >
-                              <div className="images-box">
-                                <img
-                                  className="img-fluid"
-                                  src={speaker1}
-                                  alt=""
-                                />
-                              </div>
-                              <h4>Web Design Principles and Best Practices</h4>
-                              <h5 className="name">David Warner</h5>
-                            </div>
-                          </div>
-                          <div
-                            id="collapseTwo4"
-                            className="collapse"
-                            aria-labelledby="headingTwo"
-                            data-parent="#accordion4"
-                          >
-                            <div className="card-body">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet minima dolores rerum
-                                maiores qui at commodi quas, reprehenderit eius
-                                consectetur quae magni molestias veniam,
-                                provident illum facere iure libero asperiores!
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Veniam earum nihil ex ipsa
-                                magni eligendi fugiat assumenda suscipit,
-                                accusantium, necessitatibus reiciendis odit sed,
-                                vero amet blanditiis?
-                              </p>
-                              <div className="location">
-                                <span>Location:</span> Hall 1 , Building A,
-                                Golden Street, Southafrica
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="card">
-                          <div id="headingThree4">
-                            <div className="schedule-slot-time">
-                              <span> 11.30 - 12.30 AM</span>
-                              Workshop
-                            </div>
-                            <div
-                              className="collapsed card-header"
-                              data-toggle="collapse"
-                              data-target="#collapseThree4"
-                              aria-expanded="false"
-                              aria-controls="collapseThree4"
-                            >
-                              <div className="images-box">
-                                <img
-                                  className="img-fluid"
-                                  src={speaker3}
-                                  alt=""
-                                />
-                              </div>
-                              <h4>Web Design Principles and Best Practices</h4>
-                              <h5 className="name">David Warner</h5>
-                            </div>
-                          </div>
-                          <div
-                            id="collapseThree4"
-                            className="collapse"
-                            aria-labelledby="headingThree"
-                            data-parent="#accordion4"
-                          >
-                            <div className="card-body">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet minima dolores rerum
-                                maiores qui at commodi quas, reprehenderit eius
-                                consectetur quae magni molestias veniam,
-                                provident illum facere iure libero asperiores!
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Veniam earum nihil ex ipsa
-                                magni eligendi fugiat assumenda suscipit,
-                                accusantium, necessitatibus reiciendis odit sed,
-                                vero amet blanditiis?
-                              </p>
-                              <div className="location">
-                                <span>Location:</span> Hall 1 , Building A,
-                                Golden Street, Southafrica
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="tab-pane fade"
-                      id="friday"
-                      role="tabpanel"
-                      aria-labelledby="friday-tab"
-                    >
-                      <div id="accordion">
-                        <div className="card">
-                          <div id="headingOne">
-                            <div className="schedule-slot-time">
-                              <span> 9.30 - 10.30 AM</span>
-                              Workshop
-                            </div>
-                            <div
-                              className="collapsed card-header"
-                              data-toggle="collapse"
-                              data-target="#collapseTwo"
-                              aria-expanded="false"
-                              aria-controls="collapseTwo"
-                            >
-                              <div className="images-box">
-                                <img
-                                  className="img-fluid"
-                                  src={speaker2}
-                                  alt=""
-                                />
-                              </div>
-                              <h4>Web Design Principles and Best Practices</h4>
-                              <h5 className="name">David Warner</h5>
-                            </div>
-                          </div>
-                          <div
-                            id="collapseOne"
-                            className="collapse show"
-                            aria-labelledby="headingOne"
-                            data-parent="#accordion"
-                          >
-                            <div className="card-body">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet minima dolores rerum
-                                maiores qui at commodi quas, reprehenderit eius
-                                consectetur quae magni molestias veniam,
-                                provident illum facere iure libero asperiores!
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Veniam earum nihil ex ipsa
-                                magni eligendi fugiat assumenda suscipit,
-                                accusantium, necessitatibus reiciendis odit sed,
-                                vero amet blanditiis?
-                              </p>
-                              <div className="location">
-                                <span>Location:</span> Hall 1 , Building A,
-                                Golden Street, Southafrica
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="card">
-                          <div id="headingTwo">
-                            <div className="schedule-slot-time">
-                              <span> 10.30 - 11.30 AM</span>
-                              Workshop
-                            </div>
-                            <div
-                              className="collapsed card-header"
-                              data-toggle="collapse"
-                              data-target="#collapseOne"
-                              aria-expanded="false"
-                              aria-controls="collapseOne"
-                            >
-                              <div className="images-box">
-                                <img
-                                  className="img-fluid"
-                                  src={speaker1}
-                                  alt=""
-                                />
-                              </div>
-                              <h4>Web Design Principles and Best Practices</h4>
-                              <h5 className="name">David Warner</h5>
-                            </div>
-                          </div>
-                          <div
-                            id="collapseTwo"
-                            className="collapse"
-                            aria-labelledby="headingTwo"
-                            data-parent="#accordion"
-                          >
-                            <div className="card-body">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet minima dolores rerum
-                                maiores qui at commodi quas, reprehenderit eius
-                                consectetur quae magni molestias veniam,
-                                provident illum facere iure libero asperiores!
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Veniam earum nihil ex ipsa
-                                magni eligendi fugiat assumenda suscipit,
-                                accusantium, necessitatibus reiciendis odit sed,
-                                vero amet blanditiis?
-                              </p>
-                              <div className="location">
-                                <span>Location:</span> Hall 1 , Building A,
-                                Golden Street, Southafrica
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="card">
-                          <div id="headingThree">
-                            <div className="schedule-slot-time">
-                              <span> 11.30 - 12.30 AM</span>
-                              Workshop
-                            </div>
-                            <div
-                              className="collapsed card-header"
-                              data-toggle="collapse"
-                              data-target="#collapseThree"
-                              aria-expanded="false"
-                              aria-controls="collapseThree"
-                            >
-                              <div className="images-box">
-                                <img
-                                  className="img-fluid"
-                                  src={speaker3}
-                                  alt=""
-                                />
-                              </div>
-                              <h4>Web Design Principles and Best Practices</h4>
-                              <h5 className="name">David Warner</h5>
-                            </div>
-                          </div>
-                          <div
-                            id="collapseThree"
-                            className="collapse"
-                            aria-labelledby="headingThree"
-                            data-parent="#accordion"
-                          >
-                            <div className="card-body">
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet minima dolores rerum
-                                maiores qui at commodi quas, reprehenderit eius
-                                consectetur quae magni molestias veniam,
-                                provident illum facere iure libero asperiores!
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Veniam earum nihil ex ipsa
-                                magni eligendi fugiat assumenda suscipit,
-                                accusantium, necessitatibus reiciendis odit sed,
-                                vero amet blanditiis?
-                              </p>
-                              <div className="location">
-                                <span>Location:</span> Hall 1 , Building A,
-                                Golden Street, Southafrica
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        Î
       </section>
 
       <section id="team" className="section-padding text-center">
@@ -1214,8 +594,9 @@ export default function Index() {
                   Our Speakers
                 </h2>
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
-                  Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum
-                  vocent mediocritatem an <br /> cule dicta iriure at phaedrum.
+                  Tickets are not merely a tool or simply a part of your
+                  workflow, they're a way of life. <br /> Hear from the people
+                  living and breathing tickets each and every day.
                 </p>
               </div>
             </div>
@@ -1319,8 +700,8 @@ export default function Index() {
                   Ticket Pricing
                 </h2>
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
-                  We have prioces for all budgets <br /> assuming it's the
-                  budget in a large global corp.
+                  We have prices for all budgets <br /> assuming it's the
+                  budget in a large global corp of course.
                 </p>
               </div>
             </div>
@@ -1842,7 +1223,7 @@ export default function Index() {
             <div className="col-12">
               <object
                 style={{ border: 0, height: '450px', width: '100%' }}
-                data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.15480778837!2d-77.44908382752939!3d38.953293865566366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6775cb22a9fa1341!2sThe+Firkin+%26+Fox!5e0!3m2!1sen!2sbd!4v1543773685573"
+                data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4887.11298000666!2d5.534714431860156!3d52.23327508990309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6362af67df9bd%3A0xde428797ccc55baa!2s3882%20SM%20Hell%2C%20Netherlands!5e0!3m2!1sen!2sie!4v1618855623543!5m2!1sen!2sie"
               ></object>
             </div>
           </div>
@@ -1878,7 +1259,7 @@ export default function Index() {
                   <i className="lni lni-envelope"></i>
                 </li>
                 <li>
-                  <span>Support@example.com</span>
+                  <span>support@ticketcon.com</span>
                 </li>
               </ul>
             </div>
