@@ -27,26 +27,18 @@ jobs:
         env:
           REMIX_REGISTRY_TOKEN: ${{ secrets.REMIX_REGISTRY_TOKEN }}
 
-      - name: Deploy Preview
-        uses: amondnet/vercel-action@v20
-        id: vercel-deploy-preview
-        if: github.event_name == 'push' && github.ref != 'refs/heads/main'
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          working-directory: .
+      - name: Immensely Hacky .npmrc Rewrite for Firebase Deploy
+        run: 'rm .npmrc && echo "//npm.remix.run/:_authToken=${REMIX_REGISTRY_TOKEN}\n@remix-run:registry=https://npm.remix.run"'
+        shell: bash
+        env:
+          REMIX_REGISTRY_TOKEN: ${{secrets.REMIX_REGISTRY_TOKEN}}
 
-      - name: Deploy Production
-        uses: amondnet/vercel-action@v20
-        id: vercel-deploy-production
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      - name: Deploy App
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          working-directory: .
-          vercel-args: "--prod"
-          alias-domains: ${{ secrets.VERCEL_DOMAIN }}
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          channelId: live
+          projectId: ticketculturecon
+        env:
+          FIREBASE_CLI_PREVIEWS: hostingchannels

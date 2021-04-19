@@ -1,3 +1,4 @@
+import React from 'react'
 import type { LinksFunction, LoaderFunction } from '@remix-run/react'
 import { Meta, Links, Scripts, useRouteData } from '@remix-run/react'
 import { useEffect } from 'react'
@@ -265,7 +266,7 @@ export default function App() {
   )
 }
 
-export function ErrorBoundary({ error }: { error: Error }) {
+export function ErrorBoundary({ error }: { error: Error }): JSX.Element {
   return (
     <html lang="en">
       <head>
@@ -278,7 +279,7 @@ export function ErrorBoundary({ error }: { error: Error }) {
           <pre>{error.message}</pre>
           <p>
             Replace this UI with what you want users to see when your app throws
-            uncaught errors. The file is at <code>app/App.tsx</code>.
+            uncaught errors. The file is at <code>app/root.tsx</code>.
           </p>
         </div>
 
