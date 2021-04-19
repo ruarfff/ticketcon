@@ -232,6 +232,12 @@ export default function App() {
                   </ul>
                 </div>
                 <div className="site-info">
+                  <p>
+                    Based on template by{' '}
+                    <a href="http://uideck.com" rel="nofollow">
+                      UIdeck
+                    </a>
+                  </p>
                   <p>This page was rendered at {data.date.toLocaleString()}</p>
                 </div>
               </div>
