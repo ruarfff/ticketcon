@@ -63,8 +63,12 @@ export default function App() {
     require('./js/main.js')
 
     fetch(`/__/firebase/init.json`).then((result): void => {
+      try {
         firebase.initializeApp(result.json())
-        firebase.analytics();
+        firebase.analytics()
+      } catch (err) {
+        console.log(err)
+      }
     })
   }, [])
 
