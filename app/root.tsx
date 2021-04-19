@@ -3,6 +3,8 @@ import type { LinksFunction, LoaderFunction } from '@remix-run/react'
 import { Meta, Links, Scripts, useRouteData } from '@remix-run/react'
 import { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
+import firebase from 'firebase/app'
+import 'firebase/analytics'
 
 import nivoLightboxStyle from './css/nivo-lightbox.css'
 import animateStyle from './css/animate.css'
@@ -59,6 +61,11 @@ export default function App() {
     require('./js/nivo-lightbox.js')
     require('./js/video.js')
     require('./js/main.js')
+
+    fetch(`/__/firebase/init.json`).then((result): void => {
+        firebase.initializeApp(result.json())
+        firebase.analytics();
+    })
   }, [])
 
   return (
