@@ -23,6 +23,8 @@ import trump from '../img/speaker/trump.jpg'
 import jong from '../img/speaker/jong.jpg'
 import koch from '../img/speaker/koch.jpg'
 import murdock from '../img/speaker/rupert-murdoch.jpg'
+import janus from '../img/speaker/janus.png'
+import shodan from '../img/speaker/SHODAN.jpg'
 
 import blogImg1 from '../img/blog/img-1.jpg'
 import blogImg2 from '../img/blog/img-2.jpg'
@@ -258,7 +260,7 @@ export default function Index() {
                 <p>
                   Did you know you can get highly skilled knowledge workers to
                   spend most of their time filling in tickets? Be inspired by
-                  storied like this.
+                  stories like this.
                 </p>
                 <span className="count-number">04</span>
               </div>
@@ -447,7 +449,7 @@ export default function Index() {
                               '9 Heads (Ticketing Systems) are Better Than One',
                             description:
                               "Any good ticket aficionado knows that a single source of truth only means a single source of failure and responsibility. By leveraging many systems at once, e.g. Remedy, ServiceNow and Jira, you keep the ticket skills in your company sharp and the numbers of tickets high. In this session you will learn the techniques to properly employ multiple systems simultaneously. How to randomly pick which one to respond to each day and how to appropriately punish those who can't figure out the right system to use at any given time.",
-                            location: 'The Paperclip Room, 2nd Floor.',
+                            location: 'The Paperclip Room, 2nd Floor. Heil Hydra!',
                             speaker: { image: arnimzola, name: 'Arnim Zola' },
                           },
                           {
@@ -482,10 +484,10 @@ export default function Index() {
                           },
                           {
                             time: '11.30 - 12.30 AM',
-                            title: 'TBD 1',
-                            description: 'TBD',
-                            location: 'someplace',
-                            speaker: { image: speaker3, name: 'TBD 1' },
+                            title: 'Fractal Ticketing',
+                            description: 'How to automate your ticket workflows to ensure all redundant tickets assigned to 19 people who don\'t know each other stay in sync.',
+                            location: 'Transition Room, 2nd Floor',
+                            speaker: { image: janus, name: 'Janus' },
                           },
                         ],
                       },
@@ -495,10 +497,10 @@ export default function Index() {
                           {
                             show: true,
                             time: '9.30 - 10.30 AM',
-                            title: 'TBD 2',
-                            description: 'TBD',
-                            location: 'someplace',
-                            speaker: { image: speaker1, name: 'TBD 2' },
+                            title: 'Ticket Driven Development',
+                            description: 'How to ensure not a single line of code exists that cannot be traced back to an immortal, perfect ticket.',
+                            location: 'Citadel Room, 3rd Floor',
+                            speaker: { image: shodan, name: 'SHODAN' },
                           },
                           {
                             time: '10.30 - 11.30 AM',
