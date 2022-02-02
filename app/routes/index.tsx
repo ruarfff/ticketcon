@@ -1,52 +1,52 @@
-import type { MetaFunction, LinksFunction } from '@remix-run/react'
+import type { MetaFunction, LinksFunction } from "remix";
 
-import stylesUrl from '../styles/index.css'
+import stylesUrl from "../styles/index.css";
 
-import logo1 from '../img/sponsors/microsoft.jpg'
-import logo2 from '../img/sponsors/snow.png'
-import logo3 from '../img/sponsors/atlassian.png'
-import logo4 from '../img/sponsors/remedy.png'
+import logo1 from "../img/sponsors/microsoft.jpg";
+import logo2 from "../img/sponsors/snow.png";
+import logo3 from "../img/sponsors/atlassian.png";
+import logo4 from "../img/sponsors/remedy.png";
 
-import img1 from '../img/about/img1.png'
+import img1 from "../img/about/img1.png";
 
-import speaker1 from '../img/speaker/speakers-1.jpg'
-import speaker2 from '../img/speaker/speakers-2.jpg'
-import speaker3 from '../img/speaker/speakers-3.jpg'
+import speaker1 from "../img/speaker/speakers-1.jpg";
+import speaker2 from "../img/speaker/speakers-2.jpg";
+import speaker3 from "../img/speaker/speakers-3.jpg";
 
-import dante from '../img/speaker/dante.jpg'
-import arnimzola from '../img/speaker/arnimzola.png'
-import pinhead from '../img/speaker/pinhead.jpg'
-import krang from '../img/speaker/krang.jpg'
-import antax from '../img/speaker/antax.jpg'
+import dante from "../img/speaker/dante.jpg";
+import arnimzola from "../img/speaker/arnimzola.png";
+import pinhead from "../img/speaker/pinhead.jpg";
+import krang from "../img/speaker/krang.jpg";
+import antax from "../img/speaker/antax.jpg";
 
-import trump from '../img/speaker/trump.jpg'
-import jong from '../img/speaker/jong.jpg'
-import koch from '../img/speaker/koch.jpg'
-import murdock from '../img/speaker/rupert-murdoch.jpg'
-import janus from '../img/speaker/janus.png'
-import shodan from '../img/speaker/SHODAN.jpg'
+import trump from "../img/speaker/trump.jpg";
+import jong from "../img/speaker/jong.jpg";
+import koch from "../img/speaker/koch.jpg";
+import murdock from "../img/speaker/rupert-murdoch.jpg";
+import janus from "../img/speaker/janus.png";
+import shodan from "../img/speaker/SHODAN.jpg";
 
-import blogImg1 from '../img/blog/img-1.jpg'
-import blogImg2 from '../img/blog/img-2.jpg'
-import blogImg3 from '../img/blog/img-3.jpg'
+import blogImg1 from "../img/blog/img-1.jpg";
+import blogImg2 from "../img/blog/img-2.jpg";
+import blogImg3 from "../img/blog/img-3.jpg";
 
-import winkImg from '../img/wink.jpg'
+import winkImg from "../img/wink.jpg";
 
-import backgroundImg from '../img/background/countdown.jpg'
+import backgroundImg from "../img/background/countdown.jpg";
 
-import eventVideo from '../video/event.webm'
+import eventVideo from "../video/event.webm";
 
 export let meta: MetaFunction = () => {
   return {
-    title: 'TicketCon',
+    title: "TicketCon",
     description:
-      'Home of ticketing culture and the convention where the tickets submit us.',
-  }
-}
+      "Home of ticketing culture and the convention where the tickets submit us.",
+  };
+};
 
 export let links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: stylesUrl }]
-}
+  return [{ rel: "stylesheet", href: stylesUrl }];
+};
 
 export default function Index() {
   return (
@@ -211,7 +211,7 @@ export default function Index() {
                 </h2>
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
                   It's time to take ticketing culture to the next level. Take
-                  control. Stop mindless productivity. Track everything. <br />{' '}
+                  control. Stop mindless productivity. Track everything. <br />{" "}
                   Be part of the ticketing revolution where instead of following
                   the crowd and making change, we're stopping change!
                 </p>
@@ -271,7 +271,7 @@ export default function Index() {
                 <h3>Ticket Awards</h3>
                 <p>
                   See how the best in the world are doing it. Most tickets
-                  closed in a day. Fasted rejected ticket. Most fields in a
+                  closed in a day. Fastest rejected ticket. Most fields in a
                   ticket and much much more.
                 </p>
                 <span className="count-number">05</span>
@@ -282,7 +282,7 @@ export default function Index() {
                 <i className="lni lni-gallery"></i>
                 <h3>Create Tickets with Friends</h3>
                 <p>
-                  Get the try our the latest in ticket creation technology with
+                  Get to try out the latest in ticket creation technology with
                   your friends and colleagues.
                 </p>
                 <span className="count-number">06</span>
@@ -296,7 +296,7 @@ export default function Index() {
         className="counter-section section-padding"
         style={{
           backgroundImage: `url(${backgroundImg})`,
-          backgroundRepeat: 'no-repeat',
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div className="container">
@@ -308,7 +308,7 @@ export default function Index() {
                 </div>
                 <div className="counter-content">
                   <div className="counterUp">45</div>
-                  <p>Spekers</p>
+                  <p>Speakers</p>
                 </div>
               </div>
             </div>
@@ -365,7 +365,7 @@ export default function Index() {
                 </h2>
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
                   Learn from the best in this amazing array of workshops from
-                  the top names in the industry <br /> Note: You must{' '}
+                  the top names in the industry <br /> Note: You must{" "}
                   <a href="#contact-map">open a ticket</a> to get access to an
                   event.
                 </p>
@@ -387,7 +387,7 @@ export default function Index() {
                   >
                     <div className="item-text">
                       <h4>Day 01</h4>
-                      <h5>23 August 2021</h5>
+                      <h5>23 August 2022</h5>
                     </div>
                   </a>
                 </li>
@@ -402,7 +402,7 @@ export default function Index() {
                   >
                     <div className="item-text">
                       <h4>Day 02</h4>
-                      <h5>24 August 2021</h5>
+                      <h5>24 August 2022</h5>
                     </div>
                   </a>
                 </li>
@@ -417,7 +417,7 @@ export default function Index() {
                   >
                     <div className="item-text">
                       <h4>Day 03</h4>
-                      <h5>25 August 2021</h5>
+                      <h5>25 August 2022</h5>
                     </div>
                   </a>
                 </li>
@@ -432,89 +432,92 @@ export default function Index() {
                   <div className="tab-content" id="myTabContent">
                     {[
                       {
-                        day: 'monday',
+                        day: "monday",
                         events: [
                           {
                             show: true,
-                            time: '9.30 - 10.30 AM',
-                            title: 'The Divine Ticket Comedy',
+                            time: "9.30 - 10.30 AM",
+                            title: "The Divine Ticket Comedy",
                             description:
-                              'Are you and your team constantly trying to get to ticket paradise but seem to be stuck in ticket purgatory? In this session you will learn techniques to keep your team on the right track, maximising ticket production and sending anti tickets, self service loving detractors straight to the inferno.',
-                            location: 'Purgatorio Room, 1st Floor.',
-                            speaker: { image: dante, name: 'Dante Alighieri' },
+                              "Are you and your team constantly trying to get to ticket paradise but seem to be stuck in ticket purgatory? In this session you will learn techniques to keep your team on the right track, maximising ticket production and sending anti tickets, self service loving detractors straight to the inferno.",
+                            location: "Purgatorio Room, 1st Floor.",
+                            speaker: { image: dante, name: "Dante Alighieri" },
                           },
                           {
-                            time: '10.30 - 11.30 AM',
+                            time: "10.30 - 11.30 AM",
                             title:
-                              '9 Heads (Ticketing Systems) are Better Than One',
+                              "9 Heads (Ticketing Systems) are Better Than One",
                             description:
                               "Any good ticket aficionado knows that a single source of truth only means a single source of failure and responsibility. By leveraging many systems at once, e.g. Remedy, ServiceNow and Jira, you keep the ticket skills in your company sharp and the numbers of tickets high. In this session you will learn the techniques to properly employ multiple systems simultaneously. How to randomly pick which one to respond to each day and how to appropriately punish those who can't figure out the right system to use at any given time.",
-                            location: 'The Paperclip Room, 2nd Floor. Heil Hydra!',
-                            speaker: { image: arnimzola, name: 'Arnim Zola' },
+                            location:
+                              "The Paperclip Room, 2nd Floor. Heil Hydra!",
+                            speaker: { image: arnimzola, name: "Arnim Zola" },
                           },
                           {
-                            time: '11.30 - 12.30 AM',
-                            title: 'Mastering the Art of the Ticket',
+                            time: "11.30 - 12.30 AM",
+                            title: "Mastering the Art of the Ticket",
                             description:
                               'There has been a troubling trend in our industry towards making tickets "simpler" or "easy". This is wrong. In this session we will look at how to make a ticket so beautiful and complex it could act as a Lemarchand Configuration with the power to summon the Cenobites. Let us bring life back to the art that is a ticket configuration and sort the weak from the strong in our organisations.',
-                            location: 'The Toll Room, 1st Floor',
-                            speaker: { image: pinhead, name: 'Pinhead' },
+                            location: "The Toll Room, 1st Floor",
+                            speaker: { image: pinhead, name: "Pinhead" },
                           },
                         ],
                       },
                       {
-                        day: 'tuesday',
+                        day: "tuesday",
                         events: [
                           {
                             show: true,
-                            time: '9.30 - 10.30 AM',
-                            title: 'Not Smart Enough',
+                            time: "9.30 - 10.30 AM",
+                            title: "Not Smart Enough",
                             description:
                               "No one, nothing is smarter than The Krang. That said, you, a ticket author, may come close. We will look at how to make the smartest tickets possible. So smart that you can easily spot your idiot coworkers who don't know how to fill it in correctly. Learn how to spot an idiot ticket and how to feel justified in immediately closing it without explanation.",
-                            location: 'Technodrome Room, 2nd Floor',
-                            speaker: { image: krang, name: 'Krang' },
+                            location: "Technodrome Room, 2nd Floor",
+                            speaker: { image: krang, name: "Krang" },
                           },
                           {
-                            time: '10.30 - 11.30 AM',
-                            title: 'The Ticket Swamp of Sadness',
+                            time: "10.30 - 11.30 AM",
+                            title: "The Ticket Swamp of Sadness",
                             description:
                               "Your colleagues need to be more like Atreyu when it comes to tickets. Much like the swamp of sadness, they need to really believe to get through the processes we create. My role was to show what happens to those who stop believing. You think all these tickets are useless? You stop listening to the ticket-masters? Gloop! You're gone. In this session we will look at how to ensure you weed out all the non believers and your organisation becomes, in the truest sense, a Swamp of Sadness.",
-                            location: 'The Never-ending Room, 1st Floor',
-                            speaker: { image: antax, name: 'Artax' },
+                            location: "The Never-ending Room, 1st Floor",
+                            speaker: { image: antax, name: "Artax" },
                           },
                           {
-                            time: '11.30 - 12.30 AM',
-                            title: 'Fractal Ticketing',
-                            description: 'How to automate your ticket workflows to ensure all redundant tickets assigned to 19 people who don\'t know each other stay in sync.',
-                            location: 'Transition Room, 2nd Floor',
-                            speaker: { image: janus, name: 'Janus' },
+                            time: "11.30 - 12.30 AM",
+                            title: "Fractal Ticketing",
+                            description:
+                              "How to automate your ticket workflows to ensure all redundant tickets assigned to 19 people who don't know each other stay in sync.",
+                            location: "Transition Room, 2nd Floor",
+                            speaker: { image: janus, name: "Janus" },
                           },
                         ],
                       },
                       {
-                        day: 'wednesday',
+                        day: "wednesday",
                         events: [
                           {
                             show: true,
-                            time: '9.30 - 10.30 AM',
-                            title: 'Ticket Driven Development',
-                            description: 'How to ensure not a single line of code exists that cannot be traced back to an immortal, perfect ticket.',
-                            location: 'Citadel Room, 3rd Floor',
-                            speaker: { image: shodan, name: 'SHODAN' },
+                            time: "9.30 - 10.30 AM",
+                            title: "Ticket Driven Development",
+                            description:
+                              "How to ensure not a single line of code exists that cannot be traced back to an immortal, perfect ticket.",
+                            location: "Citadel Room, 3rd Floor",
+                            speaker: { image: shodan, name: "SHODAN" },
                           },
                           {
-                            time: '10.30 - 11.30 AM',
-                            title: 'TBD 3',
-                            description: 'TBD',
-                            location: 'someplace',
-                            speaker: { image: speaker2, name: 'TBD 3' },
+                            time: "10.30 - 11.30 AM",
+                            title: "TBD 3",
+                            description: "TBD",
+                            location: "someplace",
+                            speaker: { image: speaker2, name: "TBD 3" },
                           },
                           {
-                            time: '11.30 - 12.30 AM',
-                            title: 'TBD 4',
-                            description: 'TBD',
-                            location: 'someplace',
-                            speaker: { image: speaker3, name: 'TBD 4' },
+                            time: "11.30 - 12.30 AM",
+                            title: "TBD 4",
+                            description: "TBD",
+                            location: "someplace",
+                            speaker: { image: speaker3, name: "TBD 4" },
                           },
                         ],
                       },
@@ -522,11 +525,11 @@ export default function Index() {
                       <div
                         key={day.day}
                         className={`tab-pane fade ${
-                          idx == 0 ? 'show active' : ''
+                          idx == 0 ? "show active" : ""
                         }`}
                         id={day.day}
                         role="tabpanel"
-                        aria-labelledby={day.day + '-tab'}
+                        aria-labelledby={day.day + "-tab"}
                       >
                         <div id={`accordion${idx}`}>
                           {day.events.map((event, i) => (
@@ -597,7 +600,7 @@ export default function Index() {
                 </h2>
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
                   Tickets are not merely a tool or simply a part of your
-                  workflow, they're a way of life. <br /> Hear from the people
+                  workflow. They're a way of life. <br /> Hear from the people
                   living and breathing tickets each and every day.
                 </p>
               </div>
@@ -606,23 +609,23 @@ export default function Index() {
           <div className="row justify-content-bt">
             {[
               {
-                name: 'Donal Trump',
-                title: 'Ticket philantorpist',
+                name: "Donal Trump",
+                title: "Ticket philantorpist",
                 image: trump,
               },
               {
-                name: 'Kim Jong Un',
-                title: 'Global leader and ticket enthusiast',
+                name: "Kim Jong Un",
+                title: "Global leader and ticket enthusiast",
                 image: jong,
               },
               {
-                name: 'Rupert Murdoch',
-                title: 'Ticket publisher',
+                name: "Rupert Murdoch",
+                title: "Ticket publisher",
                 image: murdock,
               },
               {
-                name: 'Charles Koch',
-                title: 'Ticket magnate',
+                name: "Charles Koch",
+                title: "Ticket magnate",
                 image: koch,
               },
             ].map((speaker) => (
@@ -702,8 +705,8 @@ export default function Index() {
                   Ticket Pricing
                 </h2>
                 <p className="wow fadeInDown" data-wow-delay="0.2s">
-                  We have prices for all budgets <br /> assuming it's the
-                  budget in a large global corp of course.
+                  We have prices for all budgets <br /> assuming it's the budget
+                  of a large global corporation.
                 </p>
               </div>
             </div>
@@ -908,10 +911,10 @@ export default function Index() {
                 </div>
                 <div className="meta-tags">
                   <span className="date">
-                    <i className="lni lni-calendar"></i> Jan 20, 2021
+                    <i className="lni lni-calendar"></i> Jan 20, 2023
                   </span>
                   <span className="comments">
-                    <i className="lni lni-comment-alt"></i>{' '}
+                    <i className="lni lni-comment-alt"></i>{" "}
                     <a href="#"> 0 Comment</a>
                   </span>
                 </div>
@@ -938,10 +941,10 @@ export default function Index() {
                 </div>
                 <div className="meta-tags">
                   <span className="date">
-                    <i className="lni lni-calendar"></i> March 15, 2021
+                    <i className="lni lni-calendar"></i> March 15, 2023
                   </span>
                   <span className="comments">
-                    <i className="lni lni-comment-alt"></i>{' '}
+                    <i className="lni lni-comment-alt"></i>{" "}
                     <a href="#"> 0 Comment</a>
                   </span>
                 </div>
@@ -968,10 +971,10 @@ export default function Index() {
                 </div>
                 <div className="meta-tags">
                   <span className="date">
-                    <i className="lni lni-calendar"></i> April 2, 2021
+                    <i className="lni lni-calendar"></i> April 2, 2023
                   </span>
                   <span className="comments">
-                    <i className="lni lni-comment-alt"></i>{' '}
+                    <i className="lni lni-comment-alt"></i>{" "}
                     <a href="#"> 0 Comment</a>
                   </span>
                 </div>
@@ -995,7 +998,7 @@ export default function Index() {
         className="section-padding"
         style={{
           backgroundImage: `url(${backgroundImg})`,
-          backgroundRepeat: 'no-repeat',
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div className="overlay"></div>
@@ -1141,7 +1144,7 @@ export default function Index() {
                             className="form-control"
                             id="msg_family"
                             name="family"
-                            placeholder="Exacly how may people are in your entire family?"
+                            placeholder="Exactly how may people are in your entire family?"
                             required
                             data-error="Please enter whether how many people are in your family"
                           />
@@ -1194,14 +1197,14 @@ export default function Index() {
                             id="form-submit"
                             onClick={() => {
                               alert(
-                                'Congratulations. Your ticket to contact us has been closed. Reason: None given.'
-                              )
+                                "Congratulations. Your ticket to contact us has been closed. Reason: None given."
+                              );
                             }}
                           >
                             <i
                               className="fa fa-paper-plane"
                               aria-hidden="true"
-                            ></i>{' '}
+                            ></i>{" "}
                             Send Message
                           </button>
                           <div
@@ -1224,7 +1227,7 @@ export default function Index() {
           <div className="row">
             <div className="col-12">
               <object
-                style={{ border: 0, height: '450px', width: '100%' }}
+                style={{ border: 0, height: "450px", width: "100%" }}
                 data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4887.11298000666!2d5.534714431860156!3d52.23327508990309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6362af67df9bd%3A0xde428797ccc55baa!2s3882%20SM%20Hell%2C%20Netherlands!5e0!3m2!1sen!2sie!4v1618855623543!5m2!1sen!2sie"
               ></object>
             </div>
@@ -1269,5 +1272,5 @@ export default function Index() {
         </div>
       </section>
     </>
-  )
+  );
 }

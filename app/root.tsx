@@ -1,76 +1,79 @@
-import React from 'react'
-import type { LinksFunction, LoaderFunction } from '@remix-run/react'
-import { Meta, Links, Scripts, useRouteData } from '@remix-run/react'
-import { useEffect } from 'react'
-import { Outlet } from 'react-router-dom'
-import firebase from 'firebase/app'
-import 'firebase/analytics'
+import React from "react";
+import type { LinksFunction, LoaderFunction } from "remix";
+import { Meta, Links, Scripts, useLoaderData } from "remix";
+import { useEffect } from "react";
+import { Outlet } from "react-router-dom";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
-import nivoLightboxStyle from './css/nivo-lightbox.css'
-import animateStyle from './css/animate.css'
-import mainStyle from './css/main.css'
-import responsiveStyle from './css/responsive.css'
-import globalStyle from './styles/global.css'
+import nivoLightboxStyle from "./css/nivo-lightbox.css";
+import animateStyle from "./css/animate.css";
+import mainStyle from "./css/main.css";
+import responsiveStyle from "./css/responsive.css";
+import globalStyle from "./styles/global.css";
 
-import logo from './img/logo.png'
-import heroBG from './img/hero-area.jpg'
+import logo from "./img/logo.png";
+import heroBG from "./img/hero-area.jpg";
 
 declare global {
   interface Window {
-    jQuery: any
-    $: any
-    WOW: any
+    jQuery: any;
+    $: any;
+    WOW: any;
   }
 }
 
 export let links: LinksFunction = () => {
   return [
     {
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto:500,700',
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css?family=Open+Sans|Roboto:500,700",
     },
-    { rel: 'stylesheet', href: 'https://cdn.lineicons.com/2.0/LineIcons.css' },
+    { rel: "stylesheet", href: "https://cdn.lineicons.com/2.0/LineIcons.css" },
     {
-      rel: 'stylesheet',
-      href:
-        'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css',
+      rel: "stylesheet",
+      href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
     },
-    { rel: 'stylesheet', href: nivoLightboxStyle },
-    { rel: 'stylesheet', href: animateStyle },
-    { rel: 'stylesheet', href: mainStyle },
-    { rel: 'stylesheet', href: responsiveStyle },
-    { rel: 'stylesheet', href: globalStyle },
-  ]
-}
+    { rel: "stylesheet", href: nivoLightboxStyle },
+    { rel: "stylesheet", href: animateStyle },
+    { rel: "stylesheet", href: mainStyle },
+    { rel: "stylesheet", href: responsiveStyle },
+    { rel: "stylesheet", href: globalStyle },
+  ];
+};
 
 export let loader: LoaderFunction = () => {
-  return { date: new Date() }
-}
+  return { date: new Date() };
+};
 
 export default function App() {
-  let data = useRouteData()
+  let data = useLoaderData();
 
   useEffect(() => {
-    window.$ = window.jQuery = require('jquery')
-    require('bootstrap')
-    require('./js/waypoint.js')
-    require('./js/jquery.countdown.min.js')
-    require('./js/jquery.counterup.min.js')
-    require('./js/jquery.nav.js')
-    require('./js/jquery.easing.min.js')
-    require('./js/nivo-lightbox.js')
-    require('./js/video.js')
-    require('./js/main.js')
+    const load = async () => {
+      window.$ = window.jQuery = require("jquery");
+      require("bootstrap");
+      require("./js/waypoint.js");
+      require("./js/jquery.countdown.min.js");
+      require("./js/jquery.counterup.min.js");
+      require("./js/jquery.nav.js");
+      require("./js/jquery.easing.min.js");
+      require("./js/nivo-lightbox.js");
+      require("./js/video.js");
+      require("./js/main.js");
 
-    fetch(`/__/firebase/init.json`).then((result): void => {
+      const result = await fetch(`/__/firebase/init.json`);
+      const firebaseConfig = await result.json();
       try {
-        firebase.initializeApp(result.json())
-        firebase.analytics()
+        initializeApp(firebaseConfig);
+        getAnalytics();
       } catch (err) {
-        console.log(err)
+        console.log(err);
       }
-    })
-  }, [])
+    };
+
+    load();
+  }, []);
 
   return (
     <html lang="en">
@@ -148,8 +151,8 @@ export default function App() {
             className="hero-area-bg"
             style={{
               backgroundImage: `url(${heroBG})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
             }}
           >
             <div className="overlay"></div>
@@ -210,8 +213,8 @@ export default function App() {
                       id="submit"
                       onClick={() => {
                         alert(
-                          'Congratulations. Your ticket to request updates has been closed. Reason: None given.'
-                        )
+                          "Congratulations. Your ticket to request updates has been closed. Reason: None given."
+                        );
                       }}
                     >
                       <span className="ladda-label">
@@ -244,7 +247,7 @@ export default function App() {
                 </div>
                 <div className="site-info">
                   <p>
-                    Based on template by{' '}
+                    Based on template by{" "}
                     <a href="http://uideck.com" rel="nofollow">
                       UIdeck
                     </a>
@@ -280,7 +283,7 @@ export default function App() {
         <Scripts />
       </body>
     </html>
-  )
+  );
 }
 
 export function ErrorBoundary({ error }: { error: Error }): JSX.Element {
@@ -303,5 +306,5 @@ export function ErrorBoundary({ error }: { error: Error }): JSX.Element {
         <Scripts />
       </body>
     </html>
-  )
+  );
 }
