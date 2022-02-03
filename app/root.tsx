@@ -164,7 +164,7 @@ export default function App() {
                       <i className="lni lni-mic"></i>
                     </div>
                     <p className="banner-info">
-                      23, Aug 2021 - Kafka Hall, NY, United states
+                      23, Aug 2022 - Kafka Hall, NY, United states
                     </p>
                     <h2 className="head-title">Ticket Conference</h2>
                     <p className="banner-desc">
