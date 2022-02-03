@@ -1,18 +1,18 @@
 const express = require('express')
 const compression = require('compression')
 const morgan = require('morgan')
-const cookieParser = require('cookie-parser')
 const { createRequestHandler } = require('@remix-run/express')
 
 let app = express()
 
 app.use(compression())
-app.use(express.static('public'))
-app.use(cookieParser())
+// You may want to be more aggressive with this caching
+app.use(express.static("public", { maxAge: "1h" }));
 
-if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('dev'))
-}
+// Remix fingerprints its assets so we can cache forever
+app.use(express.static("public/build", { immutable: true, maxAge: "1y" }));
+
+app.use(morgan("tiny"));
 
 app.all(
   "*",
