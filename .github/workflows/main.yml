@@ -2,27 +2,28 @@ name: CI
 
 on: [push]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.7.0
-        with:
-          access_token: ${{ github.token }}
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - name: Install and cache dependencies
-        uses: actions/checkout@v2
-      - uses: actions/cache@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
       - name: Build Remix App
-        run: |
-          npm ci
-          npm run build
+        run: npm run build
 
       - name: Deploy App
         uses: FirebaseExtended/action-hosting-deploy@v0

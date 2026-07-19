@@ -1,6 +1,6 @@
 import React from "react";
-import type { LinksFunction, LoaderFunction } from "remix";
-import { Meta, Links, Scripts, useLoaderData } from "remix";
+import type { LinksFunction, LoaderFunction } from "@remix-run/node";
+import { Meta, Links, Scripts, useLoaderData } from "@remix-run/react";
 import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import { initializeApp } from "firebase/app";
