@@ -387,7 +387,7 @@ export default function Index() {
                   >
                     <div className="item-text">
                       <h4>Day 01</h4>
-                      <h5>23 August 2022</h5>
+                      <h5>23 August 2027</h5>
                     </div>
                   </a>
                 </li>
@@ -402,7 +402,7 @@ export default function Index() {
                   >
                     <div className="item-text">
                       <h4>Day 02</h4>
-                      <h5>24 August 2022</h5>
+                      <h5>24 August 2027</h5>
                     </div>
                   </a>
                 </li>
@@ -417,7 +417,7 @@ export default function Index() {
                   >
                     <div className="item-text">
                       <h4>Day 03</h4>
-                      <h5>25 August 2022</h5>
+                      <h5>25 August 2027</h5>
                     </div>
                   </a>
                 </li>
