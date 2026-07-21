@@ -1,6 +1,4 @@
-import type { MetaFunction, LinksFunction } from "@remix-run/node";
-
-import stylesUrl from "../styles/index.css";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 
 import logo1 from "../img/sponsors/microsoft.jpg";
 import logo2 from "../img/sponsors/snow.png";
@@ -9,7 +7,6 @@ import logo4 from "../img/sponsors/remedy.png";
 
 import img1 from "../img/about/img1.png";
 
-import speaker1 from "../img/speaker/speakers-1.jpg";
 import speaker2 from "../img/speaker/speakers-2.jpg";
 import speaker3 from "../img/speaker/speakers-3.jpg";
 
@@ -36,19 +33,79 @@ import backgroundImg from "../img/background/countdown.jpg";
 
 import eventVideo from "../video/event.webm";
 
-export let meta: MetaFunction = () => {
-  return {
-    title: "TicketCon",
-    description:
-      "Home of ticketing culture and the convention where the tickets submit us.",
-  };
-};
+const conferenceDate = new Date("2027-08-23T10:00:00");
 
-export let links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: stylesUrl }];
-};
+function getTimeRemaining() {
+  const totalSeconds = Math.max(
+    0,
+    Math.floor((conferenceDate.getTime() - Date.now()) / 1000),
+  );
+
+  return {
+    days: Math.floor(totalSeconds / 86_400),
+    hours: Math.floor((totalSeconds % 86_400) / 3_600),
+    minutes: Math.floor((totalSeconds % 3_600) / 60),
+    seconds: totalSeconds % 60,
+  };
+}
+
+function Countdown() {
+  const [remaining, setRemaining] = useState(getTimeRemaining);
+
+  useEffect(() => {
+    const timer = window.setInterval(
+      () => setRemaining(getTimeRemaining()),
+      1_000,
+    );
+    return () => window.clearInterval(timer);
+  }, []);
+
+  const entries = [
+    ["days", remaining.days],
+    ["hours", remaining.hours],
+    ["minutes", remaining.minutes],
+    ["seconds", remaining.seconds],
+  ] as const;
+
+  return (
+    <div id="clock" className="time-count" aria-label="Time until TicketCon">
+      {entries.map(([label, value], index) => (
+        <div className={`time-entry ${label}`} key={label}>
+          <span>{String(value).padStart(2, "0")}</span>
+          {index < entries.length - 1 && <b>:</b>} {label}
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function Index() {
+  const [selectedDay, setSelectedDay] = useState("monday");
+  const [videoPlaying, setVideoPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  async function toggleVideo() {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (video.paused) {
+      try {
+        await video.play();
+      } catch {
+        return;
+      }
+    } else {
+      video.pause();
+    }
+  }
+
+  function handleContactSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    window.alert(
+      "Congratulations. Your ticket to contact us has been closed. Reason: None given.",
+    );
+  }
+
   return (
     <>
       <section id="count">
@@ -56,11 +113,8 @@ export default function Index() {
           <div className="row justify-content-center">
             <div className="col-10">
               <div className="count-wrapper text-center">
-                <div
-                  className="time-countdown wow fadeInUp"
-                  data-wow-delay="0.2s"
-                >
-                  <div id="clock" className="time-count"></div>
+                <div className="time-countdown">
+                  <Countdown />
                 </div>
               </div>
             </div>
@@ -127,15 +181,31 @@ export default function Index() {
       </section>
 
       <div className="ready-to-play">
-        <video id="bgvid" className="stop" loop>
-          <source src={eventVideo} type="video/mp4" />
+        <video
+          ref={videoRef}
+          id="bgvid"
+          className="stop"
+          loop
+          playsInline
+          preload="metadata"
+          onPlay={() => setVideoPlaying(true)}
+          onPause={() => setVideoPlaying(false)}
+        >
+          <source src={eventVideo} type="video/webm" />
         </video>
         <div id="polina" className="video-text">
           <div className="tb-t">
             <div className="tb-c">
               <div className="polina">
-                <button>
-                  <i className="lni lni-play"></i>
+                <button
+                  type="button"
+                  aria-label={videoPlaying ? "Pause video" : "Play video"}
+                  onClick={toggleVideo}
+                >
+                  <i
+                    className={`lni ${videoPlaying ? "lni-pause" : "lni-play"}`}
+                    aria-hidden="true"
+                  ></i>
                 </button>
               </div>
             </div>
@@ -376,50 +446,58 @@ export default function Index() {
             <div className="col-12 mb-5 text-center">
               <ul className="nav nav-tabs" id="myTab" role="tablist">
                 <li className="nav-item">
-                  <a
-                    className="nav-link active"
+                  <button
+                    type="button"
+                    className={`nav-link${
+                      selectedDay === "monday" ? " active" : ""
+                    }`}
                     id="monday-tab"
-                    data-toggle="tab"
-                    href="#monday"
                     role="tab"
                     aria-controls="monday"
-                    aria-expanded="true"
+                    aria-selected={selectedDay === "monday"}
+                    onClick={() => setSelectedDay("monday")}
                   >
                     <div className="item-text">
                       <h4>Day 01</h4>
                       <h5>23 August 2027</h5>
                     </div>
-                  </a>
+                  </button>
                 </li>
                 <li className="nav-item">
-                  <a
-                    className="nav-link"
+                  <button
+                    type="button"
+                    className={`nav-link${
+                      selectedDay === "tuesday" ? " active" : ""
+                    }`}
                     id="tuesday-tab"
-                    data-toggle="tab"
-                    href="#tuesday"
                     role="tab"
                     aria-controls="tuesday"
+                    aria-selected={selectedDay === "tuesday"}
+                    onClick={() => setSelectedDay("tuesday")}
                   >
                     <div className="item-text">
                       <h4>Day 02</h4>
                       <h5>24 August 2027</h5>
                     </div>
-                  </a>
+                  </button>
                 </li>
                 <li className="nav-item">
-                  <a
-                    className="nav-link"
+                  <button
+                    type="button"
+                    className={`nav-link${
+                      selectedDay === "wednesday" ? " active" : ""
+                    }`}
                     id="wednesday-tab"
-                    data-toggle="tab"
-                    href="#wednesday"
                     role="tab"
                     aria-controls="wednesday"
+                    aria-selected={selectedDay === "wednesday"}
+                    onClick={() => setSelectedDay("wednesday")}
                   >
                     <div className="item-text">
                       <h4>Day 03</h4>
                       <h5>25 August 2027</h5>
                     </div>
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -525,7 +603,7 @@ export default function Index() {
                       <div
                         key={day.day}
                         className={`tab-pane fade ${
-                          idx == 0 ? "show active" : ""
+                          day.day === selectedDay ? "show active" : ""
                         }`}
                         id={day.day}
                         role="tabpanel"
@@ -542,13 +620,7 @@ export default function Index() {
                                   <span>{event.time} </span>
                                   Workshop
                                 </div>
-                                <div
-                                  className="collapsed card-header"
-                                  data-toggle="collapse"
-                                  data-target={`#collapse${idx}${i}`}
-                                  aria-expanded="false"
-                                  aria-controls={`collapse${idx}${i}`}
-                                >
+                                <div className="card-header">
                                   <div className="images-box">
                                     <img
                                       className="img-fluid"
@@ -562,9 +634,8 @@ export default function Index() {
                               </div>
                               <div
                                 id={`collapse${idx}${i}`}
-                                className={`collapse show`}
+                                className="collapse show"
                                 aria-labelledby={`heading${idx}${i}`}
-                                data-parent={`accordion${idx}`}
                               >
                                 <div className="card-body">
                                   <p>{event.description}</p>
@@ -584,7 +655,6 @@ export default function Index() {
             </div>
           </div>
         </div>
-        Î
       </section>
 
       <section id="team" className="section-padding text-center">
@@ -1075,10 +1145,9 @@ export default function Index() {
                 <div className="form-wrapper">
                   <form
                     role="form"
-                    method="post"
                     id="contactForm"
                     name="contact-form"
-                    data-toggle="validator"
+                    onSubmit={handleContactSubmit}
                   >
                     <div className="row">
                       <div className="col-md-6 form-line">
@@ -1195,11 +1264,6 @@ export default function Index() {
                             type="submit"
                             className="btn btn-common"
                             id="form-submit"
-                            onClick={() => {
-                              alert(
-                                "Congratulations. Your ticket to contact us has been closed. Reason: None given."
-                              );
-                            }}
                           >
                             <i
                               className="fa fa-paper-plane"
