@@ -118,7 +118,7 @@
 				linkHref = self.getHash($(this));
 				$target = $('#' + linkHref);
 
-				if($target.length) {
+				if($target.length && $target.offset()) {
 					topPos = $target.offset().top;
 					self.sections[linkHref] = Math.round(topPos);
 				}
@@ -199,11 +199,16 @@
 		},
 
 		scrollTo: function(target, callback) {
-			var offset = $(target).offset().top;
+			var $target = $(target);
+			if ($target.length && $target.offset()) {
+				var offset = $target.offset().top;
 
-			$('html, body').animate({
-				scrollTop: offset
-			}, this.config.scrollSpeed, this.config.easing, callback);
+				$('html, body').animate({
+					scrollTop: offset
+				}, this.config.scrollSpeed, this.config.easing, callback);
+			} else if (callback) {
+				callback();
+			}
 		},
 
 		unbindInterval: function() {
